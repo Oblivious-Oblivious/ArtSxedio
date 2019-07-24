@@ -40,8 +40,8 @@
 18) Heroku
 
 # Optional Tools
-I) Sass
-II) Typescript
-III) GruntJS
-IV) Webpack
-V) Docker
+**I)** Sass
+**II)** Typescript
+**III)** GruntJS
+**IV)** Webpack
+**V)** Docker
