@@ -4,7 +4,7 @@
 ## Full Stack Tools
 
 # Front End
-1) HTML
+1) HTML/CSS/Javascript
 2) Bootstrap
 3) Angular
 
