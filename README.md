@@ -22,22 +22,25 @@
 8) Meteor
 9) React-Native
 
+# Machine Learning
+10) Tensorflow
+
 # Unit Testing
-10) Jasmine Framework, Karma Task Runner **(Angular)**
-11) Mocha Testing Environment, Chai Assertion Library **(Express)** **(Meteor)**
-12) Spectron Framework **(Electron)**
-13) Jest Framework, Enzyme **(React-Native)**
+11) Jasmine Framework, Karma Task Runner **(Angular)**
+12) Mocha Testing Environment, Chai Assertion Library **(Express)** **(Meteor)**
+13) Spectron Framework **(Electron)**
+14) Jest Framework, Enzyme **(React-Native)** **(Tensorflow)**
 
 # Version Control
-14) GitHub
+15) GitHub
 
 # Continuous Integration
-15) Jetkins
-16) Circle CI
-17) Travis CI
+16) Jetkins
+17) Circle CI
+18) Travis CI
 
 # Deployment System
-18) Heroku
+19) Heroku
 
 # Optional Tools
 **I)** Sass
