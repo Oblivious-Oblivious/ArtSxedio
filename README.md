@@ -42,6 +42,6 @@
 # Optional Tools
 **I)** Sass
 **II)** Typescript
-**III)** GruntJS
+**III)** GruntJS/GulpJS
 **IV)** Webpack
 **V)** Docker
