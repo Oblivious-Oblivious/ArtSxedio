@@ -5,7 +5,7 @@
 
 # Front End
 1) HTML
-2) Bootstrap
+2) Bulma
 3) Angular
 
 # Back End
@@ -19,8 +19,8 @@
 7) Electron
 
 # Mobile
-8) Meteor
-9) Ionic
+8) Ionic
+9) Meteor
 10) React-Native
 
 # Machine Learning
