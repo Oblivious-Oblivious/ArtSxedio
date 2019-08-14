@@ -1,0 +1,21 @@
+{
+  "name": "art-sxedio",
+  "version": "1.0.0",
+  "description": "Website for selling paintings",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oblivious-Oblivious/ArtSxedio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oblivious-Oblivious/ArtSxedio/issues"
+  },
+  "homepage": "https://github.com/Oblivious-Oblivious/ArtSxedio#readme"
+}
