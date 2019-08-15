@@ -4,7 +4,7 @@
 /* Dependencies */
 const gulp = require("gulp");
 const clean = require("gulp-clean");
-const lineec = require("gulp-line-ending-corrector");
+// const lineec = require("gulp-line-ending-corrector");
 const execSync = require("child_process").execSync;
 
 /* Directories */
@@ -26,14 +26,14 @@ const compileAngular = () => {
 const copyViews = () => {
     process.chdir(__dirname);
     return gulp.src(clientsource + "dist/client/*") /* Grab all javascript files and index.html */
-        .pipe(lineec()) /* Correct line endings */
+        // .pipe(lineec()) /* Correct line endings */
         .pipe(gulp.dest(exportsource + "views/"));
 }
 
 /* Copy all server files into exportsource */
 const copyServer = () => {
     return gulp.src(serversource + "**/*")
-        .pipe(lineec()) /* Correct line endings */
+        // .pipe(lineec()) /* Correct line endings */
         .pipe(gulp.dest(exportsource + "server/"));
 }
 

@@ -25,7 +25,22 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./assets/",
+                "output": "./assets/"
+              },
+              {
+                "glob": "favicon.ico",
+                "input": "./",
+                "output": "./"
+              },
+              {
+                "glob": "**/*",
+                "input": "../node_modules/font-awesome/fonts/*",
+                "output": "./assets/fonts/"
+              }
             ],
             "styles": [
               "src/styles.scss",
@@ -122,6 +137,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "client"
 }
