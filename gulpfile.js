@@ -15,7 +15,7 @@ const serversource = "server/";
 /* Build Angular front for production end and extract */
 const compileAngular = () => {
     process.chdir(clientsource);
-    execSync("npm install"); /* Install dependencies */
+    // execSync("npm install"); /* Install dependencies */
     execSync("ng build --prod"); /* Make the compilation blocking */
 
     /* Used as a nop to deal with blocking the 'ng build' command */
@@ -25,7 +25,7 @@ const compileAngular = () => {
 /* Copy all assets into exportsource */
 const copyViews = () => {
     process.chdir(__dirname);
-    return gulp.src(clientsource + "dist/AngularApp/*") /* Grab all javascript files and index.html */
+    return gulp.src(clientsource + "dist/client/*") /* Grab all javascript files and index.html */
         .pipe(lineec()) /* Correct line endings */
         .pipe(gulp.dest(exportsource + "views/"));
 }
