@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { IndexComponent } from './components/index/index.component';
 
 const routes: Routes = [
-  { path: "", component: NavbarComponent }
+  { path: "", component: IndexComponent },
+  { path: "**", redirectTo: "" }
 ];
 
 @NgModule({
