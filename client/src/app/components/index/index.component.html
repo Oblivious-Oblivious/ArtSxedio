@@ -1,3 +1,17 @@
 <app-navbar></app-navbar>
-<hr>
+<br>
+
+<div id="mainContent" class="container">
+    <!-- Basic Lightbox -->
+    <div id="lightbox" class="block" *ngFor="let image of _albums let i=index">
+        <div class="columns">
+            <div class="column">
+                <img [src]="image.thumb" (click)="open(i)">
+                <!-- <p class="notification">Column</p> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
 <app-footer></app-footer>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Lightbox } from 'ngx-lightbox';
 
 @Component({
   selector: 'app-index',
@@ -6,10 +7,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
+  _albums = [];
 
-  constructor() { }
+  constructor(
+    private _lightbox: Lightbox
+  ) {
+    for (let i = 1; i <= 4; i++) {
+      const imgsrc = "assets/img/";
+      const src = imgsrc + "image" + i + ".jpg";
+      const caption = "Image " + i + " caption here";
+      const thumb = imgsrc + "image" + i + "-thumb.jpg";
+      const album = {
+        src: src,
+        caption: caption,
+        thumb: thumb
+      };
+      this._albums.push(album);
+    }
+  }
 
   ngOnInit() {
   }
 
+  open(index: number): void {
+    this._lightbox.open(this._albums, index);
+  }
+
+  close(): void {
+    this._lightbox.close();
+  }
 }
