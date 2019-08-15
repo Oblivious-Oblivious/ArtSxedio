@@ -44,7 +44,7 @@ const cleanup = () => {
 
 const installServer = () => {
     process.chdir(exportsource + "server/");
-    execSync("npm install");
+    // execSync("npm install");
     process.chdir(__dirname);
 
     /* Used as a nop */

@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/Oblivious-Oblivious/ArtSxedio/issues"
   },
-  "homepage": "https://github.com/Oblivious-Oblivious/ArtSxedio#readme"
+  "homepage": "https://github.com/Oblivious-Oblivious/ArtSxedio#readme",
+  "devDependencies": {
+    "child_process": "^1.0.2",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-line-ending-corrector": "^1.0.3"
+  }
 }
