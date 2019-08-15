@@ -1,0 +1,42 @@
+<nav class="navbar is-fixed-top">
+    <div class="navbar-brand">
+        <a href="#" class="navbar-item">
+            <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
+            Art Sxedio
+        </a>
+        <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" data-target="navbarTarget">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarTarget" class="navbar-menu" #navMenu>
+        <div class="navbar-start">
+            <a class="navbar-item">Αρχική</a>
+            <a class="navbar-item">Πίνακες</a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">Περισσότερα</a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">Σχετικά</a>
+                    <a class="navbar-item">Παραγγελία</a>
+                    <a class="navbar-item">Γκαλερί</a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">Επικοινωνία</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary">
+                        <fa name="fad fa-paint-brush"></fa>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<hr>
