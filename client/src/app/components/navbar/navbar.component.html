@@ -16,28 +16,24 @@
 
     <div id="navbarTarget" class="navbar-menu" #navMenu>
         <div class="navbar-start">
-            <a class="navbar-item">Αρχική</a>
-            <a class="navbar-item">Πίνακες</a>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Περισσότερα</a>
-                <div class="navbar-dropdown">
-                    <a class="navbar-item">Σχετικά</a>
-                    <a class="navbar-item">Παραγγελία</a>
-                    <a class="navbar-item">Γκαλερί</a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item">Επικοινωνία</a>
-                </div>
-            </div>
         </div>
 
         <div class="navbar-end">
+            <a id="underlined" class="navbar-item">Αρχική</a>
+            <div id="underlined" class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">Έργα</a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">Είδος</a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">Ημερομηνία</a>
+                </div>
+            </div>
+            <a id="underlined-fix" class="navbar-item">Επικοινωνία</a>
             <div class="navbar-item">
                 <div class="buttons">
-                    <a class="button is-warning">
+                    <a class="button is-warning is-outlined">
                         <fa name="fad fa-paint-brush"></fa>
                     </a>
-                    <a class="button is-warning is-outlined">Αγορά</a>
                 </div>
             </div>
         </div>

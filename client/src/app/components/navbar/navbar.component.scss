@@ -7,3 +7,47 @@
     }
     font-weight: bold;
 }
+
+#underlined {
+    margin-right: 2rem;
+    text-decoration: none;
+
+    &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 10px;
+        content: "";
+        display: block;
+        height: 0.5px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.5s ease 0s, left 0.5s ease 0s;
+        width: 0;
+    }
+    &:hover:after {
+        width: 60%;
+        left: 0.9rem;
+    }
+}
+
+#underlined-fix {
+    margin-right: 2rem;
+    text-decoration: none;
+
+    &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 10px;
+        content: "";
+        display: block;
+        height: 0.5px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.5s ease 0s, left 0.5s ease 0s;
+        width: 0;
+    }
+    &:hover:after {
+        width: 60%;
+        left: 1.4rem;
+    }
+}
