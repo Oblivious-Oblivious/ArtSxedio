@@ -11,11 +11,13 @@ export class IndexComponent implements OnInit {
 
   constructor(
     private _lightbox: Lightbox
-  ) {
+  ) { }
+
+  ngOnInit() {
     for (let i = 1; i <= 4; i++) {
       const imgsrc = "assets/img/";
       const src = imgsrc + "image" + i + ".jpg";
-      const caption = "Image " + i + " caption here";
+      const caption = "Ver Meer";
       const thumb = imgsrc + "image" + i + "-thumb.jpg";
       const album = {
         src: src,
@@ -24,9 +26,6 @@ export class IndexComponent implements OnInit {
       };
       this._albums.push(album);
     }
-  }
-
-  ngOnInit() {
   }
 
   open(index: number): void {

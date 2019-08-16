@@ -26,16 +26,17 @@ const copyViews = () => {
 }
 
 /* Compile the express typescript into a dist folder */
-const compileExpress = () => {
-    process.chdir(serversource);
-    execSync("tsc");
-    process.chdir(__dirname);
-    return gulp.src(".");
-}
+// const compileExpress = () => {
+//     process.chdir(serversource);
+//     execSync("tsc");
+//     process.chdir(__dirname);
+//     return gulp.src(".");
+// }
 
 /* Copy all server files into exportsource */
 const copyServer = () => {
-    return gulp.src(serversource + "dist/**/*")
+    // return gulp.src(serversource + "dist/**/*")
+    return gulp.src(serversource + "/**/*")
         .pipe(gulp.dest(exportsource + "server/"));
 }
 
@@ -44,5 +45,5 @@ const cleanup = () => {
         .pipe(clean());
 }
 
-const compile = gulp.series(compileAngular, copyViews, compileExpress, copyServer, cleanup);
+const compile = gulp.series(compileAngular, copyViews, copyServer, cleanup);
 gulp.task("default", compile);

@@ -1,11 +1,11 @@
-import express = require("express");
-import bodyParser = require("body-parser");
-import path = require("path");
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
 
 // const api = require("./routes/api");
-const port: number = 3000;
+const port = 3000;
 
-const app: express.Application = express();
+const app = express();
 
 app.use(express.static(path.join(__dirname, "../views")));
 app.use(bodyParser.urlencoded({
@@ -20,5 +20,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log("Server running on localhost:" + port)
+    console.log("Server running on localhost:" + port);
 });
