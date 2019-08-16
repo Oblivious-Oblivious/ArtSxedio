@@ -1,6 +1,3 @@
-// tsc --p server
-// server/export/main.js
-
 /* Dependencies */
 const gulp = require("gulp");
 const clean = require("gulp-clean");
@@ -28,25 +25,24 @@ const copyViews = () => {
         .pipe(gulp.dest(exportsource + "views/"));
 }
 
+/* Compile the express typescript into a dist folder */
+const compileExpress = () => {
+    process.chdir(serversource);
+    execSync("tsc");
+    process.chdir(__dirname);
+    return gulp.src(".");
+}
+
 /* Copy all server files into exportsource */
 const copyServer = () => {
-    return gulp.src(serversource + "**/*")
+    return gulp.src(serversource + "dist/**/*")
         .pipe(gulp.dest(exportsource + "server/"));
 }
 
 const cleanup = () => {
-    return gulp.src(clientsource + "dist")
-    .pipe(clean());
+    return gulp.src(clientsource + "dist", { allowEmpty: true })
+        .pipe(clean());
 }
 
-const installServer = () => {
-    process.chdir(exportsource + "server/");
-    // execSync("npm install");
-    process.chdir(__dirname);
-
-    /* Used as a nop */
-    return gulp.src(".");
-}
-
-const compile = gulp.series(compileAngular, copyViews, copyServer, cleanup, installServer);
+const compile = gulp.series(compileAngular, copyViews, compileExpress, copyServer, cleanup);
 gulp.task("default", compile);

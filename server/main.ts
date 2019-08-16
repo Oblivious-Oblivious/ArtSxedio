@@ -1,11 +1,11 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const path = require("path");
+import express = require("express");
+import bodyParser = require("body-parser");
+import path = require("path");
 
 // const api = require("./routes/api");
-const port = 3000;
+const port: number = 3000;
 
-const app = express();
+const app: express.Application = express();
 
 app.use(express.static(path.join(__dirname, "../views")));
 app.use(bodyParser.urlencoded({
