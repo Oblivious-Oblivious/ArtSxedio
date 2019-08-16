@@ -1,15 +1,16 @@
-.navbar-brand {
-    #art {
-        color: rgb(254, 221, 86);
-    }
-    #sxedio {
-        color: rgb(244, 244, 244);
-    }
-    font-weight: bold;
-}
+// .navbar-brand {
+//     #art {
+//         color: rgb(254, 221, 86);
+//     }
+//     #sxedio {
+//         color: rgb(244, 244, 244);
+//     }
+//     font-weight: bold;
+// }
 
 #underlined {
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     text-decoration: none;
 
     &:after {
@@ -31,7 +32,8 @@
 }
 
 #underlined-fix {
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     text-decoration: none;
 
     &:after {
@@ -48,6 +50,13 @@
     }
     &:hover:after {
         width: 60%;
-        left: 1.4rem;
+        left: 1.45rem;
+    }
+}
+
+#dropdown {
+    color: rgb(244, 244, 244);
+    &:hover {
+        background: #2b2b2b;
     }
 }

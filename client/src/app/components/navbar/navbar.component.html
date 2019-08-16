@@ -1,39 +1,41 @@
 <nav class="navbar is-fixed-top is-dark">
-    <div class="navbar-brand">
-        <a href="#" class="navbar-item">
-            <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
-            <!-- <div id="art">ART</div>
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="#" class="navbar-item">
+                <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
+                <!-- <div id="art">ART</div>
             &nbsp;
             <div id="sxedio">Σχέδιο</div> -->
-            <img src="../../../assets/img/logo.png">
-        </a>
-        <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" data-target="navbarTarget">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-
-    <div id="navbarTarget" class="navbar-menu" #navMenu>
-        <div class="navbar-start">
+                <img src="../../../assets/img/logo.png">
+            </a>
+            <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" data-target="navbarTarget">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
 
-        <div class="navbar-end">
-            <a id="underlined" class="navbar-item">Αρχική</a>
-            <div id="underlined" class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Έργα</a>
-                <div class="navbar-dropdown">
-                    <a class="navbar-item">Είδος</a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item">Ημερομηνία</a>
-                </div>
+        <div id="navbarTarget" class="navbar-menu" #navMenu>
+            <div class="navbar-start">
             </div>
-            <a id="underlined-fix" class="navbar-item">Επικοινωνία</a>
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-warning is-outlined">
-                        <fa name="fad fa-paint-brush"></fa>
-                    </a>
+
+            <div class="navbar-end">
+                <a id="underlined" class="navbar-item">Αρχική</a>
+                <div id="underlined" class="navbar-item has-dropdown is-hoverable">
+                    <a id="dropdown" class="navbar-item">Έργα</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">Είδος</a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">Ημερομηνία</a>
+                    </div>
+                </div>
+                <a id="underlined-fix" class="navbar-item">Επικοινωνία</a>
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-warning is-outlined">
+                            <fa name="fad fa-paint-brush"></fa>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
