@@ -1,27 +1,53 @@
-<!-- <article class="gallery">
-    <% [1081, 1014, 267, 266, 634, 923, 682, 173, 943].each do |i| %>
-        <% height = 200 * [5,6,7,8].shuffle.first.to_i %>
-            <% width =  200 * [5,6,7,8].shuffle.first.to_i %>
-                <a class="gallery-link" href="https://unsplash.it/<%= width %>/<%= height %>?image=<%= i %>">
-                    <figure class="gallery-image">
-                        <img height="<%= height %>" src="https://unsplash.it/<%= width %>/<%= height %>?image=<%= i %>" width="<%= width %>" />
-                        <figcaption>Photo caption</figcaption>
-                    </figure>
-                </a>
-                <% end %>
-</article> -->
-
 <div class="container">
-    <!-- Basic Lightbox -->
+    <article class="gallery" *ngFor="let img of images">
+        <a class="gallery-link" [href]="'https://unsplash.it/' + img.width + '/' + img.height + '?image=' + img.id">
+            <figure class="gallery-image">
+                <img [height]="img.height" [width]="img.width" [src]="'https://unsplash.it/' + img.width + '/' + img.height + '?image=' + img.id" draggable="false">
+                <figcaption>Photo caption</figcaption>
+            </figure>
+        </a>
+    </article>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    $('.gallery-link').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        image: {
+            verticalFit: true,
+            titleSrc(item) {
+                return item.el.find('figcaption').text() || item.el.attr('title');
+            }
+        },
+        zoom: {
+            enabled: true
+        },
+        // duration: 300
+        gallery: {
+            enabled: true,
+            navigateByImgClick: false,
+            tCounter: ''
+        },
+        disableOn() {
+            return $(window).width() > 640;
+        }
+    });
+</script>
+
+<!-- Basic Lightbox -->
+<!-- <div class="container">
     <div id="lightbox" class="block" *ngFor="let image of _albums let i=index">
         <div class="columns">
             <div class="column">
                 <img [src]="image.thumb" (click)="open(i)" draggable="false">
-                <!-- <p class="notification">Column</p> -->
+                <p class="notification">Column</p>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- <footer id="footer" role="contentinfo">
     <div class="container">
