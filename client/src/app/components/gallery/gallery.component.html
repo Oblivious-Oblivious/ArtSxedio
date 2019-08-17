@@ -1,0 +1,31 @@
+<!-- <article class="gallery">
+    <% [1081, 1014, 267, 266, 634, 923, 682, 173, 943].each do |i| %>
+        <% height = 200 * [5,6,7,8].shuffle.first.to_i %>
+            <% width =  200 * [5,6,7,8].shuffle.first.to_i %>
+                <a class="gallery-link" href="https://unsplash.it/<%= width %>/<%= height %>?image=<%= i %>">
+                    <figure class="gallery-image">
+                        <img height="<%= height %>" src="https://unsplash.it/<%= width %>/<%= height %>?image=<%= i %>" width="<%= width %>" />
+                        <figcaption>Photo caption</figcaption>
+                    </figure>
+                </a>
+                <% end %>
+</article> -->
+
+<div class="container">
+    <!-- Basic Lightbox -->
+    <div id="lightbox" class="block" *ngFor="let image of _albums let i=index">
+        <div class="columns">
+            <div class="column">
+                <img [src]="image.thumb" (click)="open(i)" draggable="false">
+                <!-- <p class="notification">Column</p> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <footer id="footer" role="contentinfo">
+    <div class="container">
+        <a class="logo" href="https://codepen.io/collection/XRoxGR" rel="home">Calibration theme</a>
+        <a class="copy" href="https://mobilemarkup.com" target="_blank">&copy; mobileMarkup.com</a>
+    </div>
+</footer> -->

@@ -1,12 +1,12 @@
 <nav class="navbar is-fixed-top is-dark">
     <div class="container">
         <div class="navbar-brand">
-            <a href="#" class="navbar-item">
+            <a class="navbar-item" routerLink="/">
                 <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
                 <!-- <div id="art">ART</div>
             &nbsp;
             <div id="sxedio">Σχέδιο</div> -->
-                <img src="../../../assets/img/logo.png">
+                <img src="../../../assets/img/logo.png" draggable="false">
             </a>
             <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" data-target="navbarTarget">
                 <span aria-hidden="true"></span>
@@ -20,13 +20,13 @@
             </div>
 
             <div class="navbar-end">
-                <a id="underlined" class="navbar-item">Αρχική</a>
+                <a id="underlined" class="navbar-item" routerLink="/">Αρχική</a>
                 <div id="underlined" class="navbar-item has-dropdown is-hoverable">
                     <a id="dropdown" class="navbar-item">Έργα</a>
                     <div class="navbar-dropdown">
-                        <a class="navbar-item">Όλοι οι πίνακες</a>
+                        <a class="navbar-item" routerLink="/gallery">Όλοι οι πίνακες</a>
                         <hr class="navbar-divider">
-                        <a class="navbar-item">Είδος</a>
+                        <a class="navbar-item" routerLink="/gallery">Είδος</a>
                     </div>
                 </div>
                 <a id="underlined-fix" class="navbar-item">Επικοινωνία</a>
