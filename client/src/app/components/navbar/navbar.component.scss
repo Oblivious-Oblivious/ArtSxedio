@@ -8,6 +8,44 @@
 //     font-weight: bold;
 // }
 
+#navbarTarget {
+    a {
+        font-family: "Source Sans Pro", Helvetica, sans-serif;
+        font-weight: 300;
+    }
+
+    .navbar-dropdown {
+        a {
+            font-family: "Source Sans Pro", Helvetica, sans-serif;
+            font-weight: 500;
+            // font-size: 15px;
+        }
+    }
+}
+
+#underlined-link {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
+
+    &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 10px;
+        content: "";
+        display: block;
+        height: 0.5px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.5s ease 0s, left 0.5s ease 0s;
+        width: 0;
+    }
+    &:hover:after {
+        width: 64%;
+        left: 0.79rem;
+    }
+}
+
 #underlined {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -26,8 +64,8 @@
         width: 0;
     }
     &:hover:after {
-        width: 60%;
-        left: 0.9rem;
+        width: 58%;
+        left: 0.82rem;
     }
 }
 
@@ -49,8 +87,8 @@
         width: 0;
     }
     &:hover:after {
-        width: 60%;
-        left: 1.45rem;
+        width: 75%;
+        left: 0.85rem;
     }
 }
 

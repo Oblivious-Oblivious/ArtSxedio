@@ -24,7 +24,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    LightboxModule
+    LightboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

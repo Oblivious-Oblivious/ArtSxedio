@@ -1,57 +1,29 @@
-<div class="container">
-    <article class="gallery" *ngFor="let img of images">
-        <a class="gallery-link" [href]="'https://unsplash.it/' + img.width + '/' + img.height + '?image=' + img.id">
-            <figure class="gallery-image">
-                <img [height]="img.height" [width]="img.width" [src]="'https://unsplash.it/' + img.width + '/' + img.height + '?image=' + img.id" draggable="false">
-                <figcaption>Photo caption</figcaption>
-            </figure>
-        </a>
-    </article>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script>
-    $('.gallery-link').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        closeBtnInside: false,
-        mainClass: 'mfp-with-zoom mfp-img-mobile',
-        image: {
-            verticalFit: true,
-            titleSrc(item) {
-                return item.el.find('figcaption').text() || item.el.attr('title');
-            }
-        },
-        zoom: {
-            enabled: true
-        },
-        // duration: 300
-        gallery: {
-            enabled: true,
-            navigateByImgClick: false,
-            tCounter: ''
-        },
-        disableOn() {
-            return $(window).width() > 640;
-        }
-    });
-</script>
-
-<!-- Basic Lightbox -->
-<!-- <div class="container">
-    <div id="lightbox" class="block" *ngFor="let image of _albums let i=index">
-        <div class="columns">
-            <div class="column">
-                <img [src]="image.thumb" (click)="open(i)" draggable="false">
-                <p class="notification">Column</p>
+<!-- Thumbnails -->
+<div id="wrapper">
+    <section id="main">
+        <section class="thumbnails">
+            <div>
+                <a href="../../../assets/img/image1.jpg" draggable="false">
+                    <img src="../../../assets/img/image1-thumb.jpg" alt="" draggable="false">
+                    <h3>Rose</h3>
+                </a>
             </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- <footer id="footer" role="contentinfo">
-    <div class="container">
-        <a class="logo" href="https://codepen.io/collection/XRoxGR" rel="home">Calibration theme</a>
-        <a class="copy" href="https://mobilemarkup.com" target="_blank">&copy; mobileMarkup.com</a>
-    </div>
-</footer> -->
+            <div>
+                <a href="../../../assets/img/image3.jpg" draggable="false">
+                    <img src="../../../assets/img/image3-thumb.jpg" alt="" draggable="false">
+                    <h3>Pumkin</h3>
+                </a>
+                <a href="../../../assets/img/image4.jpg" draggable="false">
+                    <img src="../../../assets/img/image4-thumb.jpg" alt="" draggable="false">
+                    <h3>Waves</h3>
+                </a>
+            </div>
+            <div>
+                <a href="../../../assets/img/image2.jpg" draggable="false">
+                    <img src="../../../assets/img/image2-thumb.jpg" alt="" draggable="false">
+                    <h3>Ver Meer</h3>
+                </a>
+            </div>
+        </section>
+    </section>
+</div>

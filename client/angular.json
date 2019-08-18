@@ -45,10 +45,14 @@
             "styles": [
               "src/styles.scss",
               "node_modules/bulma/css/bulma.min.css",
-              "node_modules/font-awesome/css/font-awesome.min.css",
-              "node_modules/ngx-lightbox/lightbox.css"
+              "node_modules/font-awesome/css/font-awesome.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/jquery.poptrox.min.js",
+              "src/assets/js/main.js",
+              "src/assets/js/skel.min.js"
+            ]
           },
           "configurations": {
             "production": {
