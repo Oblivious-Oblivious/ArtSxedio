@@ -2,10 +2,6 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" routerLink="/">
-                <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
-                <!-- <div id="art">ART</div>
-            &nbsp;
-            <div id="sxedio">Σχέδιο</div> -->
                 <img src="../../../assets/img/logo.png" draggable="false">
             </a>
             <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" data-target="navbarTarget">
@@ -19,7 +15,7 @@
             <div class="navbar-start">
             </div>
 
-            <div class="navbar-end">
+            <div class="navbar-end" style="margin-right: 1rem;">
                 <a id="underlined-link" class="navbar-item" routerLink="/">Αρχική</a>
                 <div id="underlined" class="navbar-item has-dropdown is-hoverable">
                     <a id="dropdown" class="navbar-item" href="/gallery">Έργα</a>
@@ -32,7 +28,7 @@
                 <a id="underlined-fix" class="navbar-item">Επικοινωνία</a>
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-warning is-outlined">
+                        <a (click)="switchTheme()" class="button is-warning is-outlined" #darkThemeToggle>
                             <fa name="fad fa-paint-brush"></fa>
                         </a>
                     </div>
