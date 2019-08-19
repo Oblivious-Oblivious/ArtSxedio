@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { ThemeService } from "../../services/theme.service";
 
 @Component({
   selector: 'app-navbar',
@@ -10,18 +11,9 @@ export class NavbarComponent implements OnInit {
   @ViewChild("navMenu", { static: false }) navMenu: ElementRef;
   @ViewChild("darkThemeToggle", { static: false }) darkThemeToggle: ElementRef;
 
-  constructor() {
-    // const toggleSwitch = document.querySelector('.dark-theme-toggle');
-
-    // function switchTheme(e) {
-    //   if (e.target.checked) {
-    //     document.documentElement.setAttribute('data-theme', 'dark');
-    //   }
-    //   else {
-    //     document.documentElement.setAttribute('data-theme', 'light');
-    //   }
-    // }
-  }
+  constructor(
+    private themeService: ThemeService
+  ) {}
 
   ngOnInit() {
   }
@@ -32,7 +24,13 @@ export class NavbarComponent implements OnInit {
     this.navMenu.nativeElement.style.setProperty("--mobile", true);
   }
 
-  switchTheme() {
+  toggleTheme() {
     this.darkThemeToggle.nativeElement.classList.toggle("is-outlined");
+    if(this.themeService.isDarkTheme()) {
+      this.themeService.setLightTheme();
+    }
+    else {
+      this.themeService.setDarkTheme();
+    }
   }
 }

@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { AngularFontAwesomeModule } from "angular-font-awesome";
-import { LightboxModule } from "ngx-lightbox";
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -24,7 +23,6 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    LightboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
