@@ -27,7 +27,7 @@
     }
 }
 
-#underlined-link {
+#underlined-home, #underlined-gallery, #underlined-buy, #underlined-about {
     margin-left: 1rem;
     margin-right: 1rem;
     text-decoration: none;
@@ -44,52 +44,30 @@
         transition: width 0.5s ease 0s, left 0.5s ease 0s;
         width: 0;
     }
+}
+
+#underlined-home {
     &:hover:after {
-        width: 64%;
+        width: 63%;
         left: 0.79rem;
     }
 }
 
-#underlined {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    text-decoration: none;
-
-    &:after {
-        background: none repeat scroll 0 0 transparent;
-        bottom: 10px;
-        content: "";
-        display: block;
-        height: 0.5px;
-        left: 50%;
-        position: absolute;
-        background: #fff;
-        transition: width 0.5s ease 0s, left 0.5s ease 0s;
-        width: 0;
-    }
+#underlined-gallery {
     &:hover:after {
-        width: 58%;
-        left: 0.82rem;
+        width: 65%;
+        left: 0.83rem;
     }
 }
 
-#underlined-fix {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    text-decoration: none;
-
-    &:after {
-        background: none repeat scroll 0 0 transparent;
-        bottom: 10px;
-        content: "";
-        display: block;
-        height: 0.5px;
-        left: 50%;
-        position: absolute;
-        background: #fff;
-        transition: width 0.5s ease 0s, left 0.5s ease 0s;
-        width: 0;
+#underlined-buy {
+    &:hover:after {
+        width: 63%;
+        left: 0.81rem;
     }
+}
+
+#underlined-about {
     &:hover:after {
         width: 75%;
         left: 0.85rem;

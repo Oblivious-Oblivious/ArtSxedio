@@ -16,16 +16,11 @@
             </div>
 
             <div class="navbar-end" style="margin-right: 1rem;">
-                <a id="underlined-link" class="navbar-item" routerLink="/">Αρχική</a>
-                <div id="underlined" class="navbar-item has-dropdown is-hoverable">
-                    <a id="dropdown" class="navbar-item" href="/gallery">Έργα</a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item" href="/gallery">Όλοι οι πίνακες</a>
-                        <hr class="navbar-divider">
-                        <a class="navbar-item" href="/gallery">Αγορά</a>
-                    </div>
-                </div>
-                <a id="underlined-fix" class="navbar-item">Επικοινωνία</a>
+                <a id="underlined-home" class="navbar-item" routerLink="/">Αρχική</a>
+                <a id="underlined-gallery" class="navbar-item" href="/gallery">Γκαλερί</a>
+                <a id="underlined-buy" class="navbar-item" routerLink="/shop">Αγορά</a>
+                <a id="underlined-about" class="navbar-item" routerLink="/about">Επικοινωνία</a>
+
                 <div class="navbar-item">
                     <div class="buttons">
                         <a id="theme-toggle" (click)="toggleTheme()" class="button is-warning is-outlined" #darkThemeToggle>
