@@ -168,8 +168,8 @@ $price-yellow: #fad43b;
   text-align: justify;
   
   h3 {
-    margin-bottom: 1em;
     font-weight: 300;
+    margin-bottom: 0.5em;
   }
 
   ul {
@@ -180,8 +180,7 @@ $price-yellow: #fad43b;
   
   li {
     font-weight: 100;
-    text-indent: 0.6em;
-    margin-bottom: 0.5em;
+    text-indent: 1.2em;
   }
 }
 
@@ -195,7 +194,7 @@ $price-yellow: #fad43b;
     margin: -1px;
     border-radius: 4px;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: 1.2px;
     color: $text-color;
