@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewChildDecorator } from '@angular/core';
 import { ThemeService } from "../../services/theme.service";
 import { CookieService } from "ngx-cookie-service";
 
@@ -10,7 +10,6 @@ import { CookieService } from "ngx-cookie-service";
 export class NavbarComponent implements OnInit {
   @ViewChild("navBurger", { static: false }) navBurger: ElementRef;
   @ViewChild("navMenu", { static: false }) navMenu: ElementRef;
-  @ViewChild("darkThemeToggle", { static: false }) darkThemeToggle: ElementRef;
   @ViewChild("home", { static: false }) home: ElementRef;
   @ViewChild("gallery", { static: false }) gallery: ElementRef;
   @ViewChild("shop", { static: false }) shop: ElementRef;
@@ -19,9 +18,15 @@ export class NavbarComponent implements OnInit {
   constructor(
     private themeService: ThemeService,
     private cookieService: CookieService
-  ) { }
+  ) {}
 
   ngOnInit() {
+    if(this.cookieService.get("theme") == "light") {
+      this.setLightTheme();
+    }
+    else {
+      this.setDarkTheme();
+    }
   }
 
   toggleNavbar() {
@@ -30,16 +35,29 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleTheme() {
-    this.darkThemeToggle.nativeElement.classList.toggle("is-outlined");
-    if (this.themeService.isDarkTheme()) {
-      this.themeService.setLightTheme();
+    if (this.cookieService.get("theme") == "dark") {
+      this.setLightTheme();
     }
     else {
-      this.themeService.setDarkTheme();
+      this.setDarkTheme();
     }
   }
 
-  underline(element) {
+  setLightTheme() {
+    /* Use vanilla javascript for calling DOM elements due to
+       an angular issue on accessing DOM with ElementRef */
+    document.getElementById("theme-toggle").className = "button is-warning is-outlined";
+    this.cookieService.set("theme", "light");
+    this.themeService.setLightTheme();
+  }
+
+  setDarkTheme() {
+    document.getElementById("theme-toggle").className = "button is-warning";
+    this.cookieService.set("theme", "dark");
+    this.themeService.setDarkTheme();
+  }
+
+  underline(element: any) {
     switch (element) {
       case 0:
         this.home.nativeElement.style.textDecoration = "underline";
