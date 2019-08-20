@@ -13,24 +13,28 @@
 // }
 
 #navbarTarget {
+    background: rgb(54, 54, 54);
+
     a {
         font-family: "Source Sans Pro", Helvetica, sans-serif;
         font-weight: 300;
     }
+}
 
-    .navbar-dropdown {
-        a {
-            font-family: "Source Sans Pro", Helvetica, sans-serif;
-            font-weight: 500;
-            // font-size: 15px;
-        }
+#brand {
+    &:hover {
+        background: rgb(54, 54, 54);
     }
 }
 
-#underlined-home, #underlined-gallery, #underlined-buy, #underlined-about {
+#underlined-home,
+#underlined-gallery,
+#underlined-buy,
+#underlined-about {
     margin-left: 1rem;
     margin-right: 1rem;
     text-decoration: none;
+    color: #fff;
 
     &:after {
         background: none repeat scroll 0 0 transparent;
@@ -43,6 +47,10 @@
         background: #fff;
         transition: width 0.5s ease 0s, left 0.5s ease 0s;
         width: 0;
+    }
+
+    &:hover {
+        background: rgb(54, 54, 54);
     }
 }
 
@@ -74,31 +82,22 @@
     }
 }
 
-#dropdown {
-    color: rgb(244, 244, 244);
-    &:hover {
-        background: rgb(43, 43, 43);
-    }
+a.navbar-item.is-active {
+    background: rgb(54, 54, 54);
 }
 
-// #navbarTarger {
-//     $mobile: var(--mobile);
+is-home-selected {
+    text-decoration: underline;
+}
 
-//     @if $mobile {
-//         #dropdown {
-//             color: rgb(43, 43, 43);
-//             &hover {
-//                 background: #fff;
-//             }
-//         }
-//     } @else {
-//         #dropdown {
-//             color: rgb(244, 244, 244);
-//             &:hover {
-//                 background: rgb(43, 43, 43);
-//             }
-//         }
-//     }
-// }
+is-gallery-selected {
+    text-decoration: underline;
+}
 
-// FIIIIIIIIIIIIIIIIIIIX
+is-shop-selected {
+    text-decoration: underline;
+}
+
+is-about-selected {
+    text-decoration: underline;
+}
