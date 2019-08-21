@@ -125,18 +125,19 @@ $price-yellow: #fad43b;
   border-radius: 10px;
 }
 
-.name {
+.title {
   font-size: 2.5em;
   font-weight: 100;
+  font-style: italic;
   color: $dark;
-  margin-top: -5px;
+  margin-top: -10px;
 }
 
 .price {
   color: $price-yellow;
   font-size: 64px;
   font-weight: 300;
-  margin-top: -5px;
+  margin-bottom: 0.3em;
 }
 
 .images {
@@ -173,13 +174,13 @@ $price-yellow: #fad43b;
   }
 
   ul {
-    font-size: 0.8em;
+    font-size: 0.9em;
     list-style: disc;
     margin-left: 1em;
   }
   
   li {
-    font-weight: 100;
+    font-weight: 300;
     text-indent: 1.2em;
   }
 }
