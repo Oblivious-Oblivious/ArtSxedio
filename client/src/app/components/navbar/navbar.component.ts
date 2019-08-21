@@ -18,15 +18,16 @@ export class NavbarComponent implements OnInit {
   constructor(
     private themeService: ThemeService,
     private cookieService: CookieService
-  ) {}
+  ) { }
 
   ngOnInit() {
-    if(this.cookieService.get("theme") == "light") {
+    if (this.cookieService.get("theme") == "light") {
       this.setLightTheme();
     }
     else {
       this.setDarkTheme();
     }
+    this.underline(Number(this.cookieService.get("underlined")));
   }
 
   toggleNavbar() {
@@ -60,28 +61,32 @@ export class NavbarComponent implements OnInit {
   underline(element: any) {
     switch (element) {
       case 0:
-        this.home.nativeElement.style.textDecoration = "underline";
-        this.gallery.nativeElement.style.textDecoration = "none";
-        this.shop.nativeElement.style.textDecoration = "none";
-        this.about.nativeElement.style.textDecoration = "none";
+        this.cookieService.set("underlined", "0");
+        document.getElementById("underlined-home").className = "navbar-item is-home-selected";
+        document.getElementById("underlined-gallery").className = "navbar-item";
+        document.getElementById("underlined-shop").className = "navbar-item";
+        document.getElementById("underlined-about").className = "navbar-item";
         break;
       case 1:
-        this.home.nativeElement.style.textDecoration = "none";
-        this.gallery.nativeElement.style.textDecoration = "underline";
-        this.shop.nativeElement.style.textDecoration = "none";
-        this.about.nativeElement.style.textDecoration = "none";
+        this.cookieService.set("underlined", "1");
+        document.getElementById("underlined-home").className = "navbar-item";
+        document.getElementById("underlined-gallery").className = "navbar-item is-gallery-selected";
+        document.getElementById("underlined-shop").className = "navbar-item";
+        document.getElementById("underlined-about").className = "navbar-item";
         break;
       case 2:
-        this.home.nativeElement.style.textDecoration = "none";
-        this.gallery.nativeElement.style.textDecoration = "none";
-        this.shop.nativeElement.style.textDecoration = "underline";
-        this.about.nativeElement.style.textDecoration = "none";
+        this.cookieService.set("underlined", "2");
+        document.getElementById("underlined-home").className = "navbar-item";
+        document.getElementById("underlined-gallery").className = "navbar-item";
+        document.getElementById("underlined-shop").className = "navbar-item is-shop-selected";
+        document.getElementById("underlined-about").className = "navbar-item";
         break;
       case 3:
-        this.home.nativeElement.style.textDecoration = "none";
-        this.gallery.nativeElement.style.textDecoration = "none";
-        this.shop.nativeElement.style.textDecoration = "none";
-        this.about.nativeElement.style.textDecoration = "underline";
+        this.cookieService.set("underlined", "3");
+        document.getElementById("underlined-home").className = "navbar-item";
+        document.getElementById("underlined-gallery").className = "navbar-item";
+        document.getElementById("underlined-shop").className = "navbar-item";
+        document.getElementById("underlined-about").className = "navbar-item is-about-selected";
         break;
     }
   }
