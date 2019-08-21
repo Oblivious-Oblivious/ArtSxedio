@@ -16,7 +16,8 @@
     background: rgb(54, 54, 54);
 
     a {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
         font-weight: 300;
     }
 }
@@ -35,17 +36,18 @@
     margin-right: 1rem;
     color: #fff;
 
-    &:after {
+    &:before {
         background: none repeat scroll 0 0 transparent;
         bottom: 10px;
         content: "";
         display: block;
         height: 0.5px;
-        left: 50%;
         position: absolute;
         background: #fff;
         transition: width 0.5s ease 0s, left 0.5s ease 0s;
-        width: 0;
+
+        width: 0%;
+        left: 50%;
     }
 
     &:hover {
@@ -54,30 +56,30 @@
 }
 
 #underlined-home {
-    &:hover:after {
+    &:hover:before {
         width: 66%;
-        left: 0.8rem;
+        left: 17%;
     }
 }
 
 #underlined-gallery {
-    &:hover:after {
+    &:hover:before {
         width: 67%;
-        left: 0.81rem;
+        left: 17.5%;
     }
 }
 
 #underlined-shop {
-    &:hover:after {
+    &:hover:before {
         width: 65%;
-        left: 0.8rem;
+        left: 18.5%;
     }
 }
 
 #underlined-about {
-    &:hover:after {
-        width: 77%;
-        left: 0.83rem;
+    &:hover:before {
+        width: 78%;
+        left: 12.5%;
     }
 }
 
@@ -86,17 +88,65 @@ a.navbar-item.is-active {
 }
 
 .is-home-selected {
-    text-decoration: none;
+    &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 10px;
+        content: "";
+        display: block;
+        height: 0.5px;
+        position: absolute;
+        background: #fff;
+        transition: width 0.5s ease 0s, left 0.5s ease 0s;
+
+        width: 66%;
+        left: 17%;
+    }
 }
 
 .is-gallery-selected {
-    text-decoration: none;
+    &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 10px;
+        content: "";
+        display: block;
+        height: 0.5px;
+        position: absolute;
+        background: #fff;
+        transition: width 0.5s ease 0s, left 0.5s ease 0s;
+
+        width: 67%;
+        left: 17.5%;
+    }
 }
 
 .is-shop-selected {
-    text-decoration: none;
+    &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 10px;
+        content: "";
+        display: block;
+        height: 0.5px;
+        position: absolute;
+        background: #fff;
+        transition: width 0.5s ease 0s, left 0.5s ease 0s;
+
+        width: 65%;
+        left: 18.5%;
+    }
 }
 
 .is-about-selected {
-    text-decoration: none;
+    &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 10px;
+        content: "";
+        display: block;
+        height: 0.5px;
+        position: absolute;
+        background: #fff;
+        transition: width 0.5s ease 0s, left 0.5s ease 0s;
+
+        width: 78%;
+        left: 12.5%;
+    }
 }
