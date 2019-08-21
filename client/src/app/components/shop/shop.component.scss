@@ -140,10 +140,30 @@ $price-yellow: #fad43b;
   margin-bottom: 0.3em;
 }
 
-.images {
+.tall-image {
   img {
     width: 300px;
     margin-top: 1.5em;
+    margin-left: 1.5em;
+    filter: drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+  }
+}
+
+.wide-image {
+  img {
+    width: 450px;
+    margin-top: 3em;
+    margin-left: 1.5em;
+    filter: drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+  }
+}
+
+.ultra-wide-image {
+  img {
+    width: 550px;
+    margin-top: 7em;
     margin-left: 1.5em;
     filter: drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
     border-radius: 10px;
