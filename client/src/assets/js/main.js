@@ -1,7 +1,8 @@
 $(function () {
 	/* Vars */
 	var $window = $(window),
-		$body = $("body")
+		$body = $("body"),
+		$wrapper = $("#wrapper");
 
 	/* Breakpoints. */
 	skel.breakpoints({
