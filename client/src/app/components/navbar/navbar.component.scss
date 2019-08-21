@@ -34,16 +34,15 @@
 #underlined-about {
     margin-left: 1rem;
     margin-right: 1rem;
-    color: #fff;
 
     &:before {
         background: none repeat scroll 0 0 transparent;
         bottom: 10px;
         content: "";
         display: block;
-        height: 0.5px;
+        height: 1px;
         position: absolute;
-        background: #fff;
+        background: rgb(152, 152, 152);
         transition: width 0.5s ease 0s, left 0.5s ease 0s;
 
         width: 0%;
@@ -57,29 +56,37 @@
 
 #underlined-home {
     &:hover:before {
-        width: 66%;
-        left: 17%;
+        // width: 66%;
+        // left: 17%;
+        width: 50%;
+        left: 26%;
     }
 }
 
 #underlined-gallery {
     &:hover:before {
-        width: 67%;
-        left: 17.5%;
+        // width: 67%;
+        // left: 17.5%;
+        width: 50%;
+        left: 26%;
     }
 }
 
 #underlined-shop {
     &:hover:before {
-        width: 65%;
-        left: 18.5%;
+        // width: 65%;
+        // left: 18.5%;
+        width: 50%;
+        left: 27%;
     }
 }
 
 #underlined-about {
     &:hover:before {
-        width: 78%;
-        left: 12.5%;
+        // width: 78%;
+        // left: 12.5%;
+        width: 56%;
+        left: 23.5%;
     }
 }
 
@@ -93,13 +100,15 @@ a.navbar-item.is-active {
         bottom: 10px;
         content: "";
         display: block;
-        height: 0.5px;
+        height: 1px;
         position: absolute;
-        background: #fff;
+        background: rgb(152, 152, 152);
         transition: width 0.5s ease 0s, left 0.5s ease 0s;
 
-        width: 66%;
-        left: 17%;
+        // width: 66%;
+        // left: 17%;
+        width: 50%;
+        left: 26%;
     }
 }
 
@@ -109,13 +118,15 @@ a.navbar-item.is-active {
         bottom: 10px;
         content: "";
         display: block;
-        height: 0.5px;
+        height: 1px;
         position: absolute;
-        background: #fff;
+        background: rgb(152, 152, 152);
         transition: width 0.5s ease 0s, left 0.5s ease 0s;
 
-        width: 67%;
-        left: 17.5%;
+        // width: 67%;
+        // left: 17.5%;
+        width: 50%;
+        left: 26%;
     }
 }
 
@@ -125,13 +136,16 @@ a.navbar-item.is-active {
         bottom: 10px;
         content: "";
         display: block;
-        height: 0.5px;
+        height: 1px;
         position: absolute;
-        background: #fff;
+        background: rgb(152, 152, 152);
         transition: width 0.5s ease 0s, left 0.5s ease 0s;
+        border-radius: 10px;
 
-        width: 65%;
-        left: 18.5%;
+        // width: 65%;
+        // left: 18.5%;
+        width: 50%;
+        left: 27%;
     }
 }
 
@@ -141,12 +155,14 @@ a.navbar-item.is-active {
         bottom: 10px;
         content: "";
         display: block;
-        height: 0.5px;
+        height: 1px;
         position: absolute;
-        background: #fff;
+        background: rgb(152, 152, 152);
         transition: width 0.5s ease 0s, left 0.5s ease 0s;
 
-        width: 78%;
-        left: 12.5%;
+        // width: 78%;
+        // left: 12.5%;
+        width: 56%;
+        left: 23.5%;
     }
 }
