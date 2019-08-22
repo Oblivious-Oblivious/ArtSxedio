@@ -2,8 +2,6 @@
 
 $white: #F5F5F5;
 $dark: #4E4E4E;
-$text-color: #4c4c4c;
-$desc-color: #a6a6a6;
 $yellow: #fedd56;
 $price-yellow: #fad43b;
 
@@ -12,7 +10,7 @@ $price-yellow: #fad43b;
   width: 100%;
   height: 450px;
   background: $white;
-  box-shadow: 5px 5px 15px rgba($dark, .5);
+  box-shadow: 5px 5px 15px rgba($dark, 0.5);
   border-radius: 10px;
 }
 
@@ -109,7 +107,7 @@ $price-yellow: #fad43b;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1.2px;
-    color: $text-color;
+    color: $dark;
     cursor: pointer;
 
     &:hover {
