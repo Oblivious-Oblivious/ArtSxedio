@@ -1,6 +1,14 @@
 # ArtSxedio
  Website for selling paintings
 
+## GOALS ##
+A) Get out of Bulma (eventually)
+B) Modularize custom sass to be included as composed parts
+C) Work out tricky parts of the web page into models and services
+D) Set up mongodb for image and client information
+E) Figure out cryptography and hashing on the express side
+F) --> Get out of Angular (lol) <--
+
 ## Full Stack Tools
 
 # Front End
