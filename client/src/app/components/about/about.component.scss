@@ -1,9 +1,8 @@
 .container {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-        "Helvetica Neue", sans-serif;
+    font-family: var(--font);
     width: 100%;
-    background: #f0f0f0;
-    box-shadow: 5px 5px 15px rgba(#181818, 0.5);
+    background: var(--body-bg-color);
+    box-shadow: 5px 5px 15px var(--shadow-color);
     border-radius: 10px;
 }
 
@@ -13,6 +12,7 @@
     margin: 14px 0;
     text-align: center;
     padding: 20px;
+    color: var(--text-color);
 }
 
 .about {
@@ -20,7 +20,7 @@
     transform: scale(0.8) rotate(90deg);
     margin-top: 1em;
     margin-bottom: 2em;
-    filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(1px 5px 10px var(--border-color));
     border-radius: 10px;
 }
 
@@ -50,6 +50,7 @@
         quotes: "\201C""\201D""\2018""\2019";
         padding: 10px 20px;
         line-height: 1.4;
+        color: var(--text-color);
 
         &:before {
             content: open-quote;
@@ -77,7 +78,7 @@
     h4 {
         text-align: right;
         position: relative;
-        color: #292a2b;
+        color: var(--text-color);
         font-size: 1.4rem;
         font-weight: normal;
         line-height: 1;
