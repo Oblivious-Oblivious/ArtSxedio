@@ -51,8 +51,8 @@
             "scripts": [
               "src/assets/js/jquery.min.js",
               "src/assets/js/jquery.poptrox.min.js",
-              "src/assets/js/main.js",
-              "src/assets/js/skel.min.js"
+              "src/assets/js/skel.min.js",
+              "src/assets/js/smooth.load.js"
             ]
           },
           "configurations": {

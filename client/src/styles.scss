@@ -1,5 +1,18 @@
 // @import url(../src/assets/css/grid-layout.css);
 
+/* Variables */
+
+
+/* Universal setup */
+body {
+	background-color: rgb(241, 241, 241);
+	background-image: var(--bg-color);
+	background-size: cover;
+	background-position: top center;
+}
+
+
+
 /* Smooth Load */
 #smooth-load {
     max-width: 70em;
@@ -45,15 +58,15 @@
 	display: block;
 }
 
-/* .poptrox-popup .closer:before {
-	content: "";
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	font-family: FontAwesome;
-	font-style: normal;
-	font-weight: normal;
-	text-transform: none !important;
-} */
+// .poptrox-popup .closer:before {
+// 	content: "";
+// 	-moz-osx-font-smoothing: grayscale;
+// 	-webkit-font-smoothing: antialiased;
+// 	font-family: FontAwesome;
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	text-transform: none !important;
+// }
 
 .poptrox-popup .closer:before {
 	display: block;
@@ -76,14 +89,7 @@
 }
 
 /* Smooth loading features */
-body {
-	background-color: rgb(241, 241, 241);
-	background-image: var(--bg-color);
-	background-size: cover;
-	background-position: top center;
-}
-
-body.is-loading #smooth-load {
+.is-loading #smooth-load {
     opacity: 0;
     -moz-filter: blur(1px);
     -webkit-filter: blur(1px);
@@ -91,14 +97,14 @@ body.is-loading #smooth-load {
     filter: blur(1px);
 }
 
-body.is-covered #smooth-load {
+.is-covered #smooth-load {
     -moz-filter: blur(3px);
     -webkit-filter: blur(3px);
     -ms-filter: blur(3px);
     filter: blur(3px);
 }
 
-body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+.is-loading *, .is-loading *:before, .is-loading *:after {
 	-moz-animation: none !important;
 	-webkit-animation: none !important;
 	-ms-animation: none !important;
