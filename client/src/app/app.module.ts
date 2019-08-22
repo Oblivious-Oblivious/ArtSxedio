@@ -13,6 +13,8 @@ import { AngularFontAwesomeModule } from "angular-font-awesome";
 import { CookieService } from "ngx-cookie-service";
 
 import { AppComponent } from './app.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
