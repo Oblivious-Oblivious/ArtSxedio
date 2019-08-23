@@ -102,7 +102,6 @@
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1.2px;
-    color: var(--text-color);
     cursor: pointer;
 
     &:hover {
@@ -117,9 +116,11 @@
 }
 
 .add {
+  color: var(--dark-color);
   width: 67%;
 }
 
 .like {
+  color: var(--dark-color);
   width: 22%;
 }
