@@ -4,6 +4,7 @@
     a {
         font-family: var(--font);
         font-weight: 300;
+        // color: white;
     }
 }
 
@@ -151,3 +152,38 @@ a.navbar-item.is-active {
         left: 23.5%;
     }
 }
+
+// .custom-navbar {
+//     background-color: var(--body-bg-color);
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     box-shadow: 0 0 25px 0 var(--shadow-color);
+// }
+
+// .custom-navbar-brand {
+//     img {
+//         // width: 100px;
+//         // margin-left: 40px;
+//         max-width: 100%;
+//         max-height: 100%;
+//     }
+//     width: 100px;
+//     margin-left: 8em;
+// }
+
+// .custom-navbar-items {
+//     a {
+//         float: left;
+//         display: block;
+//         color: var(--text-color);
+//         text-align: center;
+//         padding: 14px 16px;
+//         margin: 0 16px;
+//         text-decoration: none;
+//     }
+    
+//     float: right;
+//     margin-right: 8em;
+// }
