@@ -1,9 +1,9 @@
 .footer {
-    background-color: rgb(54, 54, 54);
+    background-color: var(--nav-bg-color);
     padding: 15px 0px;
     font-family: var(--font);
     font-weight: 400;
-    color: #fff;
+    box-shadow: 0 -2px 5px 0 var(--nav-shadow-color), 0 2px 10px 0 var(--nav-shadow-color);
 
     img {
         user-select: none;
@@ -11,17 +11,18 @@
     }
 
     strong {
-        color: #fff;
+        color: var(--text-color);
     }
 }
 
 .footer-navigation p.links a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
 }
 
 .footer-navigation p.company-name {
-    color: #8f9296;
+    // color: #8f9296;
+    color: var(--text-color);
     font-size: 14px;
     font-weight: normal;
     margin-top: 45px;
@@ -35,7 +36,7 @@
 
 .footer-contacts p {
     display: inline-block;
-    color: #ffffff;
+    color: var(--text-color);
     vertical-align: middle;
 }
 
@@ -69,7 +70,7 @@
 
 .footer-about h4 {
     display: block;
-    color: #fff;
+    color: var(--text-color);
     font-size: 14px;
     font-weight: bold;
     margin-top: 5px;
@@ -98,7 +99,7 @@
     background-color: #727272;
     border-radius: 2px;
     font-size: 20px;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     line-height: 35px;
     margin-right: 5px;

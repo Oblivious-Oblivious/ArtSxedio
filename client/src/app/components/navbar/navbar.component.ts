@@ -47,13 +47,13 @@ export class NavbarComponent implements OnInit {
   setLightTheme() {
     /* Use vanilla javascript for calling DOM elements due to
        an angular issue on accessing DOM with ElementRef */
-    document.getElementById("theme-toggle").className = "button is-warning is-outlined";
+    // document.getElementById("theme-toggle").className = "button is-warning is-outlined";
     this.cookieService.set("theme", "light");
     this.themeService.setLightTheme();
   }
 
   setDarkTheme() {
-    document.getElementById("theme-toggle").className = "button is-warning";
+    // document.getElementById("theme-toggle").className = "button is-warning";
     this.cookieService.set("theme", "dark");
     this.themeService.setDarkTheme();
   }

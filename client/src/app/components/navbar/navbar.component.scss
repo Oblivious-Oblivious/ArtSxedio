@@ -1,16 +1,23 @@
-#navbarTarget {
-    background: rgb(54, 54, 54);
+.navbar {
+    background-color: var(--nav-bg-color);
+    box-shadow: 0 2px 5px 0 var(--nav-shadow-color), 0 2px 10px 0 var(--nav-shadow-color);
+}
 
-    a {
-        font-family: var(--font);
-        font-weight: 300;
-        // color: white;
+#theme-toggle {
+    color: var(--toggle-color);
+    background-color: var(--toggle-bg-color);
+    border: 1px solid var(--yellow);
+
+    &:hover {
+        color: #363636;
+        background-color: var(--yellow);
     }
 }
 
-#brand {
-    &:hover {
-        background: rgb(54, 54, 54);
+#navbarTarget {
+    a {
+        font-family: var(--font);
+        font-weight: 400;
     }
 }
 
@@ -20,6 +27,8 @@
 #underlined-about {
     margin-left: 1rem;
     margin-right: 1rem;
+    color: var(--text-color);
+    font-size: 16px;
 
     &:before {
         background: none repeat scroll 0 0 transparent;
@@ -36,7 +45,7 @@
     }
 
     &:hover {
-        background: rgb(54, 54, 54);
+        background: var(--nav-bg-color);
     }
 }
 
@@ -77,7 +86,7 @@
 }
 
 a.navbar-item.is-active {
-    background: rgb(54, 54, 54);
+    background: var(--nav-bg-color);
 }
 
 .is-home-selected {
@@ -152,38 +161,3 @@ a.navbar-item.is-active {
         left: 23.5%;
     }
 }
-
-// .custom-navbar {
-//     background-color: var(--body-bg-color);
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     box-shadow: 0 0 25px 0 var(--shadow-color);
-// }
-
-// .custom-navbar-brand {
-//     img {
-//         // width: 100px;
-//         // margin-left: 40px;
-//         max-width: 100%;
-//         max-height: 100%;
-//     }
-//     width: 100px;
-//     margin-left: 8em;
-// }
-
-// .custom-navbar-items {
-//     a {
-//         float: left;
-//         display: block;
-//         color: var(--text-color);
-//         text-align: center;
-//         padding: 14px 16px;
-//         margin: 0 16px;
-//         text-decoration: none;
-//     }
-    
-//     float: right;
-//     margin-right: 8em;
-// }
