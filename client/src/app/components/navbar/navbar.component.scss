@@ -3,18 +3,20 @@
     box-shadow: 0 2px 5px 0 var(--nav-shadow-color), 0 2px 10px 0 var(--nav-shadow-color);
 }
 
-#theme-toggle {
-    color: var(--toggle-color);
+#theme-toggle, #basket {
+    color: var(--dark-color);
     background-color: var(--toggle-bg-color);
-    border: 1px solid var(--yellow);
+    box-shadow: 0 2px 5px 0 var(--nav-shadow-color), 0 2px 10px 0 var(--nav-shadow-color);
 
     &:hover {
-        color: #363636;
+        color: var(--dark-color);
         background-color: var(--yellow);
     }
 }
 
 #navbarTarget {
+    background-color: var(--nav-bg-color);
+
     a {
         font-family: var(--font);
         font-weight: 400;

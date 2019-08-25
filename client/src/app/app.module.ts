@@ -15,6 +15,12 @@ import { CookieService } from "ngx-cookie-service";
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { BasketComponent } from './components/basket/basket.component';
+import { UserInformationComponent } from './components/basket/user-information/user-information.component';
+import { PaymentComponent } from './components/basket/payment/payment.component';
+import { ConfirmationComponent } from './components/basket/confirmation/confirmation.component';
+import { ViewBasketComponent } from './components/basket/view-basket/view-basket.component';
+import { Error404Component } from './components/error404/error404.component';
 
 
 @NgModule({
@@ -25,7 +31,13 @@ import { environment } from '../environments/environment';
     IndexComponent,
     GalleryComponent,
     AboutComponent,
-    ShopComponent
+    ShopComponent,
+    BasketComponent,
+    UserInformationComponent,
+    PaymentComponent,
+    ConfirmationComponent,
+    ViewBasketComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,

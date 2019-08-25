@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { ThemeService } from "../../services/theme.service";
 import { CookieService } from "ngx-cookie-service";
 
@@ -14,6 +14,9 @@ export class NavbarComponent implements OnInit {
   @ViewChild("gallery", { static: false }) gallery: ElementRef;
   @ViewChild("shop", { static: false }) shop: ElementRef;
   @ViewChild("about", { static: false }) about: ElementRef;
+
+  @Input() price: string = "0.00";
+  @Input() items: string = "0";
 
   constructor(
     private themeService: ThemeService,
