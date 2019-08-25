@@ -33,6 +33,9 @@ export class NavbarComponent implements OnInit {
     this.underline(Number(this.cookieService.get("underlined")));
   }
 
+  addToBasket(price: number) {
+  }
+
   toggleNavbar() {
     this.navBurger.nativeElement.classList.toggle("is-active");
     this.navMenu.nativeElement.classList.toggle("is-active");

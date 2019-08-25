@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-shop',
@@ -6,10 +7,16 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./shop.component.scss'],
 })
 export class ShopComponent implements OnInit {
+  @ViewChild("navbar", { static: false }) navbar: NavbarComponent;
+
   images = ["image1", "image2", "image3", "image4"];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addToBasket(price: number) {
+    this.navbar.addToBasket(price);
   }
 }
