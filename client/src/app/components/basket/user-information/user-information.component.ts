@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { BasketComponent } from '../basket.component';
 
 @Component({
   selector: 'app-user-information',
@@ -6,7 +7,7 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
   styleUrls: ['./user-information.component.scss']
 })
 export class UserInformationComponent implements OnInit {
-  userInfoEvent: EventEmitter<boolean> = new EventEmitter();
+  @ViewChild(BasketComponent, { static: false }) basket: BasketComponent;
 
   constructor() { }
 
@@ -14,6 +15,6 @@ export class UserInformationComponent implements OnInit {
   }
 
   gotoPayment() {
-    this.userInfoEvent.emit(true);
+    this.basket.userInfoEvent();
   }
 }

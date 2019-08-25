@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-basket',
@@ -6,64 +7,78 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./basket.component.scss']
 })
 export class BasketComponent implements OnInit {
-  @Input() private viewBasketEvent: EventEmitter<boolean>;
-  @Input() private userInfoEvent: EventEmitter<boolean>;
-  @Input() private paymentEvent: EventEmitter<boolean>;
-  @Input() private confirmationEvent: EventEmitter<boolean>;
 
-  constructor() { }
+  constructor(
+    private cookieService: CookieService
+  ) { }
 
   ngOnInit() {
-    this.listenForEvents();
+    document.getElementById("step-1-marker").className = "steps-marker";
+    switch (this.cookieService.get("step")) {
+      case "1":
+        this.viewBasketEvent();
+        break;
+      case "2":
+        this.userInfoEvent();
+        break;
+      case "3":
+        this.paymentEvent();
+        break;
+      case "4":
+        this.confirmationEvent();
+        break;
+    }
   }
 
-  listenForEvents() {
-    if (this.viewBasketEvent) {
-      console.log("EVENT 1");
-      this.viewBasketEvent.subscribe((data) => {
-        document.getElementById("step-1").className = "steps-segment has-gaps";
-        document.getElementById("step-2").className = "steps-segment has-gaps is-active";
-        document.getElementById("step-3").className = "steps-segment has-gaps";
-        document.getElementById("step-4").className = "steps-segment has-gaps";
+  viewBasketEvent() {
+    this.cookieService.set("step", "1");
+    document.getElementById("step-1").className = "steps-segment has-gaps";
+    document.getElementById("step-2").className = "steps-segment has-gaps is-active";
+    document.getElementById("step-3").className = "steps-segment has-gaps";
+    document.getElementById("step-4").className = "steps-segment has-gaps";
 
-        document.getElementById("step-1-marker").className = "steps-marker";
-      });
-    }
-    if (this.userInfoEvent) {
-      console.log("EVENT 2");
-      this.userInfoEvent.subscribe((data) => {
-        document.getElementById("step-1").className = "steps-segment has-gaps";
-        document.getElementById("step-2").className = "steps-segment has-gaps";
-        document.getElementById("step-3").className = "steps-segment has-gaps is-active";
-        document.getElementById("step-4").className = "steps-segment has-gaps";
+    document.getElementById("step-1-marker").className = "steps-marker";
+    document.getElementById("step-2-marker").className = "steps-marker";
+    document.getElementById("step-3-marker").className = "steps-marker is-hollow";
+    document.getElementById("step-4-marker").className = "steps-marker is-hollow";
+  }
 
-        document.getElementById("step-2-marker").className = "steps-marker";
-      });
-    }
-    if (this.paymentEvent) {
-      console.log("EVENT 3");
-      this.paymentEvent.subscribe((data) => {
-        document.getElementById("step-1").className = "steps-segment has-gaps";
-        document.getElementById("step-2").className = "steps-segment has-gaps";
-        document.getElementById("step-3").className = "steps-segment has-gaps";
-        document.getElementById("step-4").className = "steps-segment has-gaps is-active";
+  userInfoEvent() {
+    this.cookieService.set("step", "2");
+    document.getElementById("step-1").className = "steps-segment has-gaps";
+    document.getElementById("step-2").className = "steps-segment has-gaps";
+    document.getElementById("step-3").className = "steps-segment has-gaps is-active";
+    document.getElementById("step-4").className = "steps-segment has-gaps";
 
-        document.getElementById("step-3-marker").className = "steps-marker";
-      });
-    }
-    if (this.confirmationEvent) {
-      console.log("EVENT 4");
-      this.confirmationEvent.subscribe((data) => {
-        document.getElementById("step-1").className = "steps-segment has-gaps is-active";
-        document.getElementById("step-2").className = "steps-segment has-gaps";
-        document.getElementById("step-3").className = "steps-segment has-gaps";
-        document.getElementById("step-4").className = "steps-segment has-gaps";
+    document.getElementById("step-1-marker").className = "steps-marker";
+    document.getElementById("step-2-marker").className = "steps-marker";
+    document.getElementById("step-3-marker").className = "steps-marker";
+    document.getElementById("step-4-marker").className = "steps-marker is-hollow";
+  }
 
-        document.getElementById("step-1-marker").className = "steps-marker is-hollow";
-        document.getElementById("step-2-marker").className = "steps-marker is-hollow";
-        document.getElementById("step-3-marker").className = "steps-marker is-hollow";
-        document.getElementById("step-4-marker").className = "steps-marker is-hollow";
-      });
-    }
+  paymentEvent() {
+    this.cookieService.set("step", "3");
+    document.getElementById("step-1").className = "steps-segment has-gaps";
+    document.getElementById("step-2").className = "steps-segment has-gaps";
+    document.getElementById("step-3").className = "steps-segment has-gaps";
+    document.getElementById("step-4").className = "steps-segment has-gaps is-active";
+
+    document.getElementById("step-1-marker").className = "steps-marker";
+    document.getElementById("step-2-marker").className = "steps-marker";
+    document.getElementById("step-3-marker").className = "steps-marker";
+    document.getElementById("step-4-marker").className = "steps-marker";
+  }
+
+  confirmationEvent() {
+    this.cookieService.set("step", "4");
+    document.getElementById("step-1").className = "steps-segment has-gaps is-active";
+    document.getElementById("step-2").className = "steps-segment has-gaps";
+    document.getElementById("step-3").className = "steps-segment has-gaps";
+    document.getElementById("step-4").className = "steps-segment has-gaps";
+
+    document.getElementById("step-1-marker").className = "steps-marker";
+    document.getElementById("step-2-marker").className = "steps-marker is-hollow";
+    document.getElementById("step-3-marker").className = "steps-marker is-hollow";
+    document.getElementById("step-4-marker").className = "steps-marker is-hollow";
   }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { BasketComponent } from '../basket.component';
 
 @Component({
   selector: 'app-view-basket',
@@ -6,7 +7,7 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
   styleUrls: ['./view-basket.component.scss']
 })
 export class ViewBasketComponent implements OnInit {
-  viewBasketEvent: EventEmitter<boolean> = new EventEmitter();
+  @ViewChild(BasketComponent, { static: false }) basket: BasketComponent;
 
   constructor() { }
 
@@ -14,6 +15,6 @@ export class ViewBasketComponent implements OnInit {
   }
 
   gotoUserInfo() {
-    this.viewBasketEvent.emit(true);
+    this.basket.viewBasketEvent();
   }
 }

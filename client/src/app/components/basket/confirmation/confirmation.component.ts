@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { BasketComponent } from '../basket.component';
 
 @Component({
   selector: 'app-confirmation',
@@ -6,7 +7,7 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
   styleUrls: ['./confirmation.component.scss']
 })
 export class ConfirmationComponent implements OnInit {
-  confirmationEvent: EventEmitter<boolean> = new EventEmitter();
+  @ViewChild(BasketComponent, { static: false }) basket: BasketComponent;
 
   constructor() { }
 
@@ -15,6 +16,6 @@ export class ConfirmationComponent implements OnInit {
 
   redirectShop() {
     /* Reset steps */
-    this.confirmationEvent.emit(true);
+    this.basket.confirmationEvent();
   }
 }
