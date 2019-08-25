@@ -1,74 +1,27 @@
 <div id="smooth-load">
-    <div class="container">
-        <div class="tall-image">
-            <img src="../../../assets/img/tall/Τριανταφυλλο.JPG">
-        </div>
+    <div *ngFor="let image of images">
+        <div class="container">
+            <div class="{{image.size}}">
+                <img src="{{image.src}}" draggable="false">
+            </div>
 
-        <div class="product">
-            <h1 class="title">Rose</h1>
-            <h2 class="price">$100</h2>
-            <div class="desc">
-                <h3>Διαστάσεις</h3>
-                <ul>
-                    <li class="dimensions">35 x 50 εκ.</li>
-                    <li class="painting-type">Ακρυλικό</li>
-                </ul>
-            </div>
-            <div class="buttons">
-                <button (click)="addToBasket(100)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;προσθηκη στο καλαθι</button> &nbsp;
-                <button class="like"><span>♥</span></button>
+            <div class="product">
+                <h1 class="title"> {{image.title}} </h1>
+                <h2 class="price"> ${{image.price}} </h2>
+                <div class="desc">
+                    <h3>Dimensions</h3>
+                    <ul>
+                        <li class="dimensions"> {{image.dimensions}} cm </li>
+                        <li class="painting-type"> {{image.type}} </li>
+                    </ul>
+                </div>
+
+                <div class="buttons">
+                    <button (click)="addToBasket(100)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;add to cart</button> &nbsp;
+                    <button class="like"><span>♥</span></button>
+                </div>
             </div>
         </div>
+        <br>
     </div>
 </div>
-<br>
-
-<div id="smooth-load">
-    <div class="container">
-        <div class="wide-image">
-            <img src="../../../assets/img/wide/Συκα.JPG">
-        </div>
-
-        <div class="product">
-            <h1 class="title">Syka</h1>
-            <h2 class="price">$70</h2>
-            <div class="desc">
-                <h3>Διαστάσεις</h3>
-                <ul>
-                    <li class="dimensions">50 x 30 εκ.</li>
-                    <li class="painting-type">Ακρυλικό</li>
-                </ul>
-            </div>
-            <div class="buttons">
-                <button (click)="addToBasket(70)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;προσθηκη στο καλαθι</button> &nbsp;
-                <button class="like"><span>♥</span></button>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
-
-<div id="smooth-load">
-    <div class="container">
-        <div class="ultra-wide-image">
-            <img src="../../../assets/img/ultra-wide/Ναξος.JPG">
-        </div>
-
-        <div class="product">
-            <h1 class="title">Naxos</h1>
-            <h2 class="price">$130</h2>
-            <div class="desc">
-                <h3>Διαστάσεις</h3>
-                <ul>
-                    <li class="dimensions">100 x 40 εκ.</li>
-                    <li class="painting-type">Ακρυλικό</li>
-                </ul>
-            </div>
-            <div class="buttons">
-                <button (click)="addToBasket(130)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;προσθηκη στο καλαθι</button> &nbsp;
-                <button class="like"><span>♥</span></button>
-            </div>
-        </div>
-    </div>
-</div>
-<br>

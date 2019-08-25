@@ -1,5 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
+
+import { Image } from "../../models/image.model";
+import { ImageService } from "../../services/image.service";
 
 @Component({
   selector: 'app-shop',
@@ -8,12 +11,17 @@ import { NavbarComponent } from '../navbar/navbar.component';
 })
 export class ShopComponent implements OnInit {
   @ViewChild("navbar", { static: false }) navbar: NavbarComponent;
+  
+  @Input() images: Image[] = [];
 
-  images = ["image1", "image2", "image3", "image4"];
-
-  constructor() { }
+  constructor(
+    private imageService: ImageService
+  ) {}
 
   ngOnInit() {
+    this.imageService.getImages().subscribe((paintings) => {
+      this.images = paintings;
+    });
   }
 
   addToBasket(price: number) {

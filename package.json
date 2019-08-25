@@ -26,5 +26,7 @@
     "gulp-typescript": "^5.0.1",
     "typescript": "^3.5.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "mongoose": "^5.6.10"
+  }
 }
