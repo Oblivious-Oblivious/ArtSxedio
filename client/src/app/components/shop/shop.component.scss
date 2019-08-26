@@ -251,7 +251,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 320px) {
   .container {
     height: 100%;
   }
@@ -259,21 +259,21 @@
   .tall {
     img {
       margin-left: 1.9em;
-      width: 79%;
+      width: 78%;
     }
   }
 
   .wide {
     img {
       margin-top: 1em;
-      width: 83%;
+      width: 82%;
     }
   }
 
   .ultra-wide {
     img {
       margin-top: 1em;
-      width: 82%;
+      width: 81%;
     }
   }
 
