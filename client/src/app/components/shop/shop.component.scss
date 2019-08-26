@@ -27,7 +27,7 @@
 .tall {
   img {
     width: 300px;
-    margin-top: 1.5em;
+    margin-top: 0.8em;
     margin-left: 1.5em;
     filter: drop-shadow(2px 2px 8px var(--border-color));
     border-radius: 10px;
@@ -37,7 +37,7 @@
 .wide {
   img {
     width: 450px;
-    margin-top: 3em;
+    margin-top: 2em;
     margin-left: 1.5em;
     filter: drop-shadow(2px 2px 8px var(--border-color));
     border-radius: 10px;
@@ -47,7 +47,7 @@
 .ultra-wide {
   img {
     width: 550px;
-    margin-top: 7em;
+    margin-top: 6em;
     margin-left: 1.5em;
     filter: drop-shadow(2px 2px 8px var(--border-color));
     border-radius: 10px;
@@ -55,11 +55,14 @@
 }
 
 .product {
-  position: absolute;
-  width: 40%;
-  height: 100%;
-  top: 10%;
-  left: 60%;
+  // position: absolute;
+  // width: 40%;
+  // height: 100%;
+  // top: 10%;
+  // left: 60%;
+  margin-left: 3em;
+  margin-top: 2em;
+  // margin: 0 auto;
 }
 
 .desc {
@@ -123,4 +126,34 @@
 .like {
   color: var(--dark-color);
   width: 22%;
+}
+
+@media screen and (max-width: 769px) {
+  .container {
+    height: 900px;
+  }
+
+  .tall {
+    img {
+      margin-left: 1.9em;
+    }
+  }
+
+  .wide {
+    img {
+      margin-top: 1em;
+      width: 315px;
+    }
+  }
+
+  .ultra-wide {
+    img {
+      margin-top: 1em;
+      width: 315px;
+    }
+  }
+
+  .product {
+    margin-left: 2.5em;
+  }
 }

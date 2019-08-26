@@ -5,3 +5,9 @@
         color: var(--text-color);
     }
 }
+
+@media screen and (max-width: 769px) {
+    .steps-segment {
+        margin-left: 2em;
+    }
+}

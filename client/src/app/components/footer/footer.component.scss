@@ -105,3 +105,15 @@
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
+@media screen and (max-width: 769px) {
+    .container {
+        margin-left: 2em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        margin-left: 1em;
+    }
+}

@@ -1,27 +1,107 @@
 <div id="smooth-load">
-    <div *ngFor="let image of images">
+    <!-- <div *ngFor="let image of images"> -->
         <div class="container">
-            <div class="{{image.size}}">
-                <img src="{{image.src}}" draggable="false">
-            </div>
-
-            <div class="product">
-                <h1 class="title"> {{image.title}} </h1>
-                <h2 class="price"> ${{image.price}} </h2>
-                <div class="desc">
-                    <h3>Dimensions</h3>
-                    <ul>
-                        <li class="dimensions"> {{image.dimensions}} cm </li>
-                        <li class="painting-type"> {{image.type}} </li>
-                    </ul>
+            <div class="columns">
+                <!-- <div class="column {{image.size}}"> -->
+                <div class="column tall">
+                    <!-- <img src="{{image.src}}" draggable="false"> -->
+                    <img src="../../../assets/img/tall/Boat in the Sunset.JPG">
                 </div>
 
-                <div class="buttons">
-                    <button (click)="addToBasket(100)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;add to cart</button> &nbsp;
-                    <button class="like"><span>♥</span></button>
+                <div class="column product">
+                    <!-- <h1 class="title"> {{image.title}} </h1> -->
+                    <h1 class="title"> Boat in the Sunset </h1>
+                    <!-- <h2 class="price"> ${{image.price}} </h2> -->
+                    <h2 class="price"> $80 </h2>
+                    <div class="desc">
+                        <h3>Dimensions</h3>
+                        <ul>
+                            <!-- <li class="dimensions"> {{image.dimensions}} cm </li>
+                            <li class="painting-type"> {{image.type}} </li> -->
+                            <li class="dimensions"> 80 x 60 cm </li>
+                            <li class="painting-type"> Acrylic </li>
+                        </ul>
+                    </div>
+
+                    <div class="buttons">
+                        <button (click)="addToBasket(100)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;add to cart</button> &nbsp;
+                        <button class="like"><span>♥</span></button>
+                    </div>
                 </div>
             </div>
         </div>
         <br>
-    </div>
+    <!-- </div> -->
+</div>
+
+<div id="smooth-load">
+    <!-- <div *ngFor="let image of images"> -->
+        <div class="container">
+            <div class="columns">
+                <!-- <div class="column {{image.size}}"> -->
+                <div class="column wide">
+                    <!-- <img src="{{image.src}}" draggable="false"> -->
+                    <img src="../../../assets/img/wide/Fruit.JPG">
+                </div>
+
+                <div class="column product">
+                    <!-- <h1 class="title"> {{image.title}} </h1> -->
+                    <h1 class="title"> Fruit </h1>
+                    <!-- <h2 class="price"> ${{image.price}} </h2> -->
+                    <h2 class="price"> $90 </h2>
+                    <div class="desc">
+                        <h3>Dimensions</h3>
+                        <ul>
+                            <!-- <li class="dimensions"> {{image.dimensions}} cm </li>
+                                <li class="painting-type"> {{image.type}} </li> -->
+                            <li class="dimensions"> 60 x 90 cm </li>
+                            <li class="painting-type"> Acrylic </li>
+                        </ul>
+                    </div>
+
+                    <div class="buttons">
+                        <button (click)="addToBasket(100)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;add to cart</button> &nbsp;
+                        <button class="like"><span>♥</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    <!-- </div> -->
+</div>
+
+<div id="smooth-load">
+    <!-- <div *ngFor="let image of images"> -->
+        <div class="container">
+            <div class="columns">
+                <!-- <div class="column {{image.size}}"> -->
+                <div class="column ultra-wide">
+                    <!-- <img src="{{image.src}}" draggable="false"> -->
+                    <img src="../../../assets/img/ultra-wide/Quay.JPG">
+                </div>
+
+                <div class="column product">
+                    <!-- <h1 class="title"> {{image.title}} </h1> -->
+                    <h1 class="title"> Quay </h1>
+                    <!-- <h2 class="price"> ${{image.price}} </h2> -->
+                    <h2 class="price"> $100 </h2>
+                    <div class="desc">
+                        <h3>Dimensions</h3>
+                        <ul>
+                            <!-- <li class="dimensions"> {{image.dimensions}} cm </li>
+                                    <li class="painting-type"> {{image.type}} </li> -->
+                            <li class="dimensions"> 50 x 90 cm </li>
+                            <li class="painting-type"> Acrylic </li>
+                        </ul>
+                    </div>
+
+                    <div class="buttons">
+                        <button (click)="addToBasket(100)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;add to cart</button> &nbsp;
+                        <button class="like"><span>♥</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    <!-- </div> -->
 </div>
