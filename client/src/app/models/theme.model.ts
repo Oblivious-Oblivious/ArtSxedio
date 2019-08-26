@@ -31,9 +31,11 @@ export const dark: Theme = {
         "--nav-bg-color": "#363636",
         "--text-color": "#ffffff",
         "--anchor-color": "#181818",
-        "--border-color": "#ffffff",
-        "--shadow-color": "#ffffffbb",
-        "--nav-shadow-color": "rgba(255, 255, 255, 0.12)",
+        // "--border-color": "#ffffff",
+        "--border-color": "#181818",
+        "--shadow-color": "rgba(24, 24, 24, 1)",
+        // "--nav-shadow-color": "rgba(255, 255, 255, 0.12)",
+        "--nav-shadow-color": "rgba(0, 0, 0, 0.24)",
         "--toggle-color": "#181818",
         "--toggle-bg-color": "var(--yellow)"
     }
