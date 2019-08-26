@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+
 import { ThemeService } from "../../services/theme.service";
+import { CartService } from "../../services/cart.service";
 import { CookieService } from "ngx-cookie-service";
+
 
 @Component({
   selector: 'app-navbar',
@@ -15,15 +18,23 @@ export class NavbarComponent implements OnInit {
   @ViewChild("shop", { static: false }) shop: ElementRef;
   @ViewChild("about", { static: false }) about: ElementRef;
 
-  price: string = "0.00";
-  items: string = "0";
+  _price: string;
+  items: string;
 
   constructor(
     private themeService: ThemeService,
-    private cookieService: CookieService
+    private cookieService: CookieService,
+    private cartService: CartService
   ) { }
 
   ngOnInit() {
+    if (!this._price) {
+      localStorage.setItem("price", JSON.stringify({ price: "0.00" }));
+    }
+    if (!this.items) {
+      localStorage.setItem("items", JSON.stringify({ items: 0 }));
+    }
+
     if (this.cookieService.get("theme") == "light") {
       this.setLightTheme();
     }
@@ -31,9 +42,20 @@ export class NavbarComponent implements OnInit {
       this.setDarkTheme();
     }
     this.underline(Number(this.cookieService.get("underlined")));
-  }
+    this._price = JSON.parse(localStorage.getItem("price")).price;
+    this.items = JSON.parse(localStorage.getItem("items")).items;
 
-  addToBasket(price: number) {
+    this.cartService.addToBasket.subscribe((product) => {
+      /* Reset price into a number */
+      if (JSON.parse(localStorage.getItem("price")).price == "0.00") {
+        localStorage.setItem("price", JSON.stringify({ price: 0 }));
+      }
+      localStorage.setItem("price", JSON.stringify({ price: JSON.parse(localStorage.getItem("price")).price + product.price }));
+      localStorage.setItem("items", JSON.stringify({ items: JSON.parse(localStorage.getItem("items")).items + 1 }));
+
+      this._price = JSON.parse(localStorage.getItem("price")).price;
+      this.items = JSON.parse(localStorage.getItem("items")).items;
+    });
   }
 
   toggleNavbar() {

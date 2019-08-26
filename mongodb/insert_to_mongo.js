@@ -18,7 +18,7 @@ const imageList = [
         ],
         title: "Boat in the Sunset",
         size: "tall",
-        price: "80",
+        price: 80,
         dimensions: "60 x 100",
         type: "Acrilic"
     }),
@@ -29,7 +29,7 @@ const imageList = [
         ],
         size: "tall",
         title: "Dali",
-        price: "100",
+        price: 100,
         dimensions: "60 x 80",
         type: "Acrilic"
     }),
@@ -38,7 +38,7 @@ const imageList = [
         details: [],
         size: "tall",
         title: "Lighthouse",
-        price: "70",
+        price: 70,
         dimensions: "60 x 100",
         type: "Acrilic"
     }),
@@ -49,7 +49,7 @@ const imageList = [
         ],
         size: "tall",
         title: "Old House",
-        price: "80",
+        price: 80,
         dimensions: "60 x 100",
         type: "Acrilic"
     }),
@@ -60,7 +60,7 @@ const imageList = [
         ],
         size: "tall",
         title: "Pencil",
-        price: "80",
+        price: 80,
         dimensions: "60 x 100",
         type: "Acrilic"
     }),
@@ -69,7 +69,7 @@ const imageList = [
         details: [],
         size: "tall",
         title: "Poppies",
-        price: "120",
+        price: 120,
         dimensions: "60 x 90",
         type: "Acrilic"
     }),
@@ -78,7 +78,7 @@ const imageList = [
         details: [],
         size: "tall",
         title: "River",
-        price: "100",
+        price: 100,
         dimensions: "60 x 100",
         type: "Acrilic"
     }),
@@ -89,7 +89,7 @@ const imageList = [
         ],
         size: "tall",
         title: "Rose",
-        price: "100",
+        price: 100,
         dimensions: "60 x 100",
         type: "Acrilic"
     }),
@@ -100,7 +100,7 @@ const imageList = [
         ],
         size: "tall",
         title: "Salt Shaker",
-        price: "100",
+        price: 100,
         dimensions: "60 x 100",
         type: "Acrilic"
     }),
@@ -109,7 +109,7 @@ const imageList = [
         details: [],
         size: "tall",
         title: "Sunny Snow",
-        price: "100",
+        price: 100,
         dimensions: "60 x 100",
         type: "Acrilic"
     }),
@@ -118,7 +118,7 @@ const imageList = [
         details: [],
         size: "tall",
         title: "Ver Meer",
-        price: "100",
+        price: 100,
         dimensions: "60 x 100",
         type: "Acrilic"
     }),
@@ -131,7 +131,7 @@ const imageList = [
         ],
         size: "wide",
         title: "Figs",
-        price: "100",
+        price: 100,
         dimensions: "90 x 60",
         type: "Acrilic"
     }),
@@ -143,7 +143,7 @@ const imageList = [
         ],
         size: "wide",
         title: "Fruit",
-        price: "100",
+        price: 100,
         dimensions: "90 x 60",
         type: "Acrilic"
     }),
@@ -156,7 +156,7 @@ const imageList = [
         ],
         size: "wide",
         title: "Leaves",
-        price: "100",
+        price: 100,
         dimensions: "90 x 60",
         type: "Acrilic"
     }),
@@ -165,7 +165,7 @@ const imageList = [
         details: [],
         size: "wide",
         title: "Night Waves",
-        price: "100",
+        price: 100,
         dimensions: "90 x 60",
         type: "Acrilic"
     }),
@@ -174,7 +174,7 @@ const imageList = [
         details: [],
         size: "wide",
         title: "Peaches",
-        price: "100",
+        price: 100,
         dimensions: "90 x 60",
         type: "Acrilic"
     }),
@@ -185,7 +185,7 @@ const imageList = [
         ],
         size: "wide",
         title: "River Boat",
-        price: "100",
+        price: 100,
         dimensions: "90 x 60",
         type: "Acrilic"
     }),
@@ -194,7 +194,7 @@ const imageList = [
         details: [],
         size: "wide",
         title: "Rocks",
-        price: "100",
+        price: 100,
         dimensions: "90 x 60",
         type: "Acrilic"
     }),
@@ -206,7 +206,7 @@ const imageList = [
         ],
         size: "wide",
         title: "Snowy Village",
-        price: "100",
+        price: 100,
         dimensions: "90 x 60",
         type: "Acrilic"
     }),
@@ -215,7 +215,7 @@ const imageList = [
         details: [],
         size: "wide",
         title: "Vase",
-        price: "100",
+        price: 100,
         dimensions: "90 x 60",
         type: "Acrilic"
     }),
@@ -224,7 +224,7 @@ const imageList = [
         details: [],
         size: "wide",
         title: "Waves",
-        price: "100",
+        price: 100,
         dimensions: "90 x 60",
         type: "Acrilic"
     }),
@@ -235,7 +235,7 @@ const imageList = [
         details: [],
         size: "ultra-wide",
         title: "Cactus",
-        price: "150",
+        price: 150,
         dimensions: "120 x 50",
         type: "Acrilic"
     }),
@@ -244,7 +244,7 @@ const imageList = [
         details: [],
         size: "ultra-wide",
         title: "Naxos",
-        price: "150",
+        price: 150,
         dimensions: "120 x 50",
         type: "Acrilic"
     }),
@@ -256,7 +256,7 @@ const imageList = [
         ],
         size: "ultra-wide",
         title: "Pumkin",
-        price: "150",
+        price: 150,
         dimensions: "120 x 50",
         type: "Acrilic"
     }),
@@ -268,7 +268,7 @@ const imageList = [
         ],
         size: "ultra-wide",
         title: "Quay",
-        price: "150",
+        price: 150,
         dimensions: "120 x 50",
         type: "Acrilic"
     }),
@@ -277,7 +277,7 @@ const imageList = [
         size: "ultra-wide",
         details: [],
         title: "Quince",
-        price: "150",
+        price: 150,
         dimensions: "120 x 50",
         type: "Acrilic"
     }),

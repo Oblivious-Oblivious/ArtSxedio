@@ -4,7 +4,7 @@ export class Image {
     src: string;
     title: string;
     size: string;
-    price: string;
+    price: number;
     dimensions: string;
     type: string;
 }

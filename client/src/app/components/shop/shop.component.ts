@@ -3,6 +3,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 
 import { Image } from "../../models/image.model";
 import { ImageService } from "../../services/image.service";
+import { CartService } from "../../services/cart.service";
 
 @Component({
   selector: 'app-shop',
@@ -10,12 +11,14 @@ import { ImageService } from "../../services/image.service";
   styleUrls: ['./shop.component.scss'],
 })
 export class ShopComponent implements OnInit {
-  @ViewChild("navbar", { static: false }) navbar: NavbarComponent;
+  @ViewChild(NavbarComponent, { static: false }) navbar: NavbarComponent;
   
   @Input() images: Image[] = [];
+  _price: number;
 
   constructor(
-    private imageService: ImageService
+    private imageService: ImageService,
+    private cartService: CartService
   ) {}
 
   ngOnInit() {
@@ -24,7 +27,11 @@ export class ShopComponent implements OnInit {
     });
   }
 
-  addToBasket(price: number) {
-    this.navbar.addToBasket(price);
+  addToBasket(_id: string, title: string, price: number, src: string) {
+    let element = <HTMLInputElement> document.getElementById(_id);
+    element.disabled = true;
+    
+    element.style.background = "#fedc5686";
+    this.cartService.add(title, price, src);
   }
 }

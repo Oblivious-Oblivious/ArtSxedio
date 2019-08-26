@@ -6,7 +6,7 @@ const imageSchema = new Schema({
     details: [String],
     title: String,
     size: String,
-    price: String,
+    price: Number,
     dimensions: String,
     type: String
 });
