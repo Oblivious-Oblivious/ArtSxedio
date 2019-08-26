@@ -22,6 +22,7 @@ import { PaymentComponent } from './components/basket/payment/payment.component'
 import { ConfirmationComponent } from './components/basket/confirmation/confirmation.component';
 import { ViewBasketComponent } from './components/basket/view-basket/view-basket.component';
 import { Error404Component } from './components/error404/error404.component';
+import { LazyLoadComponent } from './components/lazy-load/lazy-load.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { Error404Component } from './components/error404/error404.component';
     PaymentComponent,
     ConfirmationComponent,
     ViewBasketComponent,
-    Error404Component
+    Error404Component,
+    LazyLoadComponent
   ],
   imports: [
     BrowserModule,
