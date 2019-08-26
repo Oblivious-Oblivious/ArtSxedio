@@ -1,43 +1,131 @@
 <div id="smooth-load">
     <section id="main">
         <section class="thumbnails">
-            <div *ngFor="let image of images">
-                <div class="container">
-                    <div class="columns">
-                        <div class="column {{image.size}}">
-                            <!-- <div class="column tall"> -->
-                            <a href="{{image.src}}">
+            <!-- <div *ngFor="let image of images"> -->
+            <div class="container">
+                <div class="columns">
+                    <!-- <div class="column {{image.size}}"> -->
+                    <div class="column tall">
+                        <!-- <a href="{{image.src}}">
                                 <img src="{{image.src}}" draggable="false">
-                            </a>
-                            <!-- <a href="../../../assets/img/tall/Boat in the Sunset.JPG" draggable="false">
-                        <img src="../../../assets/img/tall/Boat in the Sunset.JPG" draggable="false">
-                    </a> -->
+                            </a> -->
+                        <a href="../../../assets/img/tall/Boat in the Sunset.JPG" draggable="false">
+                            <img src="../../../assets/img/tall/Boat in the Sunset.JPG" draggable="false">
+                        </a>
+                    </div>
+
+                    <div class="column product">
+                        <!-- <h1 class="title"> {{image.title}} </h1> -->
+                        <h1 class="title"> Boat in the Sunset </h1>
+                        <!-- <h2 class="price"> ${{image.price}} </h2> -->
+                        <h2 class="price"> $80 </h2>
+                        <div class="desc">
+                            <h3>Dimensions</h3>
+                            <ul>
+                                <!-- <li class="dimensions"> {{image.dimensions}} cm </li>
+                                    <li class="painting-type"> {{image.type}} </li> -->
+                                <li class="dimensions"> 80 x 60 cm </li>
+                                <li class="painting-type"> Acrylic </li>
+                            </ul>
                         </div>
 
-                        <div class="column product">
-                            <h1 class="title"> {{image.title}} </h1>
-                            <!-- <h1 class="title"> Boat in the Sunset </h1> -->
-                            <h2 class="price"> ${{image.price}} </h2>
-                            <!-- <h2 class="price"> $80 </h2> -->
-                            <div class="desc">
-                                <h3>Dimensions</h3>
-                                <ul>
-                                    <li class="dimensions"> {{image.dimensions}} cm </li>
-                                    <li class="painting-type"> {{image.type}} </li>
-                                    <!-- <li class="dimensions"> 80 x 60 cm </li>
-                            <li class="painting-type"> Acrylic </li> -->
-                                </ul>
-                            </div>
-
-                            <div class="buttons">
-                                <button id="{{image._id}}" (click)="addToBasket(image._id, image.title, image.price, image.src)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;add to cart</button> &nbsp;
-                                <button class="like"><span>♥</span></button>
-                            </div>
+                        <div class="buttons">
+                            <button id="{{image._id}}" (click)="addToBasket(image._id, image.title, image.price, image.src)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;add to cart</button> &nbsp;
+                            <button class="like"><span>♥</span></button>
                         </div>
                     </div>
                 </div>
-                <br>
             </div>
+            <br>
+            <!-- </div> -->
+        </section>
+    </section>
+</div>
+
+<div id="smooth-load">
+    <section id="main">
+        <section class="thumbnails">
+            <!-- <div *ngFor="let image of images"> -->
+            <div class="container">
+                <div class="columns">
+                    <!-- <div class="column {{image.size}}"> -->
+                    <div class="column wide">
+                        <!-- <a href="{{image.src}}">
+                                    <img src="{{image.src}}" draggable="false">
+                                </a> -->
+                        <a href="../../../assets/img/wide/Fruit.JPG" draggable="false">
+                            <img src="../../../assets/img/wide/Fruit.JPG" draggable="false">
+                        </a>
+                    </div>
+
+                    <div class="column product">
+                        <!-- <h1 class="title"> {{image.title}} </h1> -->
+                        <h1 class="title"> Fruit </h1>
+                        <!-- <h2 class="price"> ${{image.price}} </h2> -->
+                        <h2 class="price"> $90 </h2>
+                        <div class="desc">
+                            <h3>Dimensions</h3>
+                            <ul>
+                                <!-- <li class="dimensions"> {{image.dimensions}} cm </li>
+                                        <li class="painting-type"> {{image.type}} </li> -->
+                                <li class="dimensions"> 60 x 80 cm </li>
+                                <li class="painting-type"> Acrylic </li>
+                            </ul>
+                        </div>
+
+                        <div class="buttons">
+                            <button id="{{image._id}}" (click)="addToBasket(image._id, image.title, image.price, image.src)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;add to cart</button> &nbsp;
+                            <button class="like"><span>♥</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- </div> -->
+        </section>
+    </section>
+</div>
+
+<div id="smooth-load">
+    <section id="main">
+        <section class="thumbnails">
+            <!-- <div *ngFor="let image of images"> -->
+            <div class="container">
+                <div class="columns">
+                    <!-- <div class="column {{image.size}}"> -->
+                    <div class="column ultra-wide">
+                        <!-- <a href="{{image.src}}">
+                                        <img src="{{image.src}}" draggable="false">
+                                    </a> -->
+                        <a href="../../../assets/img/ultra-wide/Quay.JPG" draggable="false">
+                            <img src="../../../assets/img/ultra-wide/Quay.JPG" draggable="false">
+                        </a>
+                    </div>
+
+                    <div class="column product">
+                        <!-- <h1 class="title"> {{image.title}} </h1> -->
+                        <h1 class="title"> Quay </h1>
+                        <!-- <h2 class="price"> ${{image.price}} </h2> -->
+                        <h2 class="price"> $100 </h2>
+                        <div class="desc">
+                            <h3>Dimensions</h3>
+                            <ul>
+                                <!-- <li class="dimensions"> {{image.dimensions}} cm </li>
+                                            <li class="painting-type"> {{image.type}} </li> -->
+                                <li class="dimensions"> 50 x 100 cm </li>
+                                <li class="painting-type"> Acrylic </li>
+                            </ul>
+                        </div>
+
+                        <div class="buttons">
+                            <button id="{{image._id}}" (click)="addToBasket(image._id, image.title, image.price, image.src)" class="add"><fa name="fas fa-shopping-basket"></fa>&nbsp;add to cart</button> &nbsp;
+                            <button class="like"><span>♥</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- </div> -->
         </section>
     </section>
 </div>
