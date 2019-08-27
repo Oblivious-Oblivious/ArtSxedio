@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 import { ThemeService } from "../../services/theme.service";
-import { CartService } from "../../services/cart.service";
+import { ProductService } from "../../services/product.service";
 import { CookieService } from "ngx-cookie-service";
 
 
@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
   constructor(
     private themeService: ThemeService,
     private cookieService: CookieService,
-    private cartService: CartService
+    private productService: ProductService
   ) { }
 
   ngOnInit() {
@@ -45,7 +45,7 @@ export class NavbarComponent implements OnInit {
     this._price = JSON.parse(localStorage.getItem("price")).price;
     this.items = JSON.parse(localStorage.getItem("items")).items;
 
-    this.cartService.addToBasket.subscribe((product) => {
+    this.productService.addToBasket.subscribe((product) => {
       /* Reset price into a number */
       if (JSON.parse(localStorage.getItem("price")).price == "0.00") {
         localStorage.setItem("price", JSON.stringify({ price: 0 }));

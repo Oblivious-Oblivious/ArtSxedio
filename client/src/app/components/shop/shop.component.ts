@@ -3,7 +3,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 
 import { Image } from "../../models/image.model";
 import { ImageService } from "../../services/image.service";
-import { CartService } from "../../services/cart.service";
+import { ProductService } from "../../services/product.service";
 
 @Component({
   selector: 'app-shop',
@@ -18,7 +18,7 @@ export class ShopComponent implements OnInit {
 
   constructor(
     private imageService: ImageService,
-    private cartService: CartService
+    private productService: ProductService
   ) {}
 
   ngOnInit() {
@@ -32,6 +32,6 @@ export class ShopComponent implements OnInit {
     element.disabled = true;
     
     element.style.background = "#fedc5686";
-    this.cartService.add(title, price, src);
+    this.productService.add(title, price, src);
   }
 }
