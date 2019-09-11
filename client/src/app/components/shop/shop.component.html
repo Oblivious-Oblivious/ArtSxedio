@@ -1,17 +1,21 @@
+<!-- <section class="section"> -->
+<!-- <div class="container"> -->
+<!-- <div class="text-center"> -->
 <div id="smooth-load">
-    <section id="main">
-        <section class="thumbnails">
-            <div *ngFor="let image of images">
-                <div class="container">
+    <section class="thumbnails">
+        <div *ngFor="let image of images">
+            <div>
+                <!-- <div *ngFor="let image of pagedItems"> -->
+                <div class="container jumbotron">
                     <div class="columns">
                         <div class="column {{image.size}}">
                             <!-- <div class="column tall"> -->
-                            <a href="{{image.src}}">
+                            <a href="{{image.src}}" draggable="false">
                                 <img src="{{image.src}}" draggable="false">
                             </a>
                             <!-- <a href="../../../assets/img/tall/Boat in the Sunset.JPG" draggable="false">
-                            <img src="../../../assets/img/tall/Boat in the Sunset.JPG" draggable="false">
-                        </a> -->
+                                        <img src="../../../assets/img/tall/Boat in the Sunset.JPG" draggable="false">
+                                    </a> -->
                         </div>
 
                         <div class="column product">
@@ -25,7 +29,7 @@
                                     <li class="dimensions"> {{image.dimensions}} cm </li>
                                     <li class="painting-type"> {{image.type}} </li>
                                     <!-- <li class="dimensions"> 80 x 60 cm </li>
-                                <li class="painting-type"> Acrylic </li> -->
+                                            <li class="painting-type"> Acrylic </li> -->
                                 </ul>
                             </div>
 
@@ -36,8 +40,25 @@
                         </div>
                     </div>
                 </div>
-                <br>
             </div>
-        </section>
+            <br>
+        </div>
     </section>
 </div>
+
+<!-- Pagination -->
+<!-- <nav class="pagination is-right" role="navigation" aria-label="pagination">
+        <a class="pagination-previous" (click)="setPage(1)" [class.disabled]="pagination.currentPage === 1">First</a>
+        <a class="pagination-previous" (click)="setPage(pagination.currentPage - 1)" [class.disabled]="pagination.currentPage === 1">Previous</a>
+        <a class="pagination-next" (click)="setPage(pagination.currentPage + 1)" [class.disabled]="pagination.currentPage === pagination.totalPages">Next</a>
+        <a class="pagination-next" (click)="setPage(pagination.totalPages)" [class.disabled]="pagination.currentPage === pagination.totalPages">Last</a>
+
+        <ul *ngIf="pagination.pages && pagination.pages.length" class="pagination-list">
+            <li *ngFor="let page of pagination.pages">
+                <a class="pagination-link" [class.is-current]="pagination.currentPage === page" aria-label="Goto page 1" (click)="setPage(page)">{{ page }}</a>
+            </li>
+        </ul>
+    </nav> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </section> -->

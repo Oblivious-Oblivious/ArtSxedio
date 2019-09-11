@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
+  // items = ["image1", "image2", "image3", "image4"];
+  
   constructor(
   ) {}
 

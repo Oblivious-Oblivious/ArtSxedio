@@ -9,6 +9,14 @@
 5) Figure out cryptography and hashing on the express side
 6) --> Get out of Angular (lol) <--
 
+
+-------------------------------
+ADD SHOPPING CART FUNCTIONALITY
+ADD HOME PAGE AND 404 PAGE
+PUBLISH AND FIND DOMAIN NAME
+-------------------------------
+
+
 ## Full Stack Tools
 
 # Front End
@@ -22,7 +30,7 @@
 # Database
 5) MongoDB (NoSQL)
 6) Postgres (SQL)
-
+2
 # Desktop
 7) Electron
 

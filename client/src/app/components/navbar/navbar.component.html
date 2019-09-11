@@ -1,10 +1,10 @@
 <nav class="navbar is-fixed-top">
     <div class="container">
         <div class="navbar-brand">
-            <a id="brand" class="navbar-item" href="/">
+            <a id="brand" class="navbar-item" href="/" draggable="false">
                 <img src="../../../assets/img/Logos/logo.png" draggable="false">
             </a>
-            <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" data-target="navbarTarget">
+            <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" data-target="navbarTarget" draggable="false">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -16,17 +16,17 @@
             </div>
 
             <div class="navbar-end" style="margin-right: 1rem;">
-                <a (click)="underline(0)" id="underlined-home" class="navbar-item" href="/" #home>Home</a>
-                <a (click)="underline(1)" id="underlined-gallery" class="navbar-item" href="/gallery" #gallery>Gallery</a>
-                <a (click)="underline(2)" id="underlined-shop" class="navbar-item" href="/shop" #shop>Shop</a>
-                <a (click)="underline(3)" id="underlined-about" class="navbar-item" href="/about" #about>About</a>
+                <a (click)="underline(0)" id="underlined-home" class="navbar-item" href="/" draggable="false" #home>Home</a>
+                <a (click)="underline(1)" id="underlined-gallery" class="navbar-item" href="/gallery" draggable="false" #gallery>Gallery</a>
+                <a (click)="underline(2)" id="underlined-shop" class="navbar-item" href="/shop" draggable="false" #shop>Shop</a>
+                <a (click)="underline(3)" id="underlined-about" class="navbar-item" href="/about" draggable="false" #about>About</a>
 
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a id="theme-toggle" (click)="toggleTheme()" class="button">
+                        <a id="theme-toggle" (click)="toggleTheme()" class="button" draggable="false">
                             <fa name="fad fa-paint-brush"></fa>
                         </a>
-                        <a id="basket" href="/basket/view-basket" class="button">
+                        <a id="basket" href="/basket/view-basket" class="button" draggable="false">
                             <fa name="fas fa-shopping-cart"></fa> &nbsp; ${{_price}} ({{items}})
                         </a>
                     </div>
