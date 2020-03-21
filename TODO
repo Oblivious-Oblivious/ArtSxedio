@@ -1,0 +1,7 @@
+GOALS
+Get out of Bulma (eventually)
+Modularize custom sass to be included as composed parts
+Work out tricky parts of the web page into models and services
+Set up mongodb for image and client information
+Figure out cryptography and hashing on the express side
+--> Get out of Angular (lol) <--
