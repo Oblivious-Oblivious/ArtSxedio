@@ -12,7 +12,7 @@ import { PaginationService } from "../../services/pagination.service";
 })
 export class ShopComponent implements OnInit {
     @Input() images: Image[] = [];
-    _price: number;
+    _price!: number;
 
     // Array of all items
     private allItems: any = [];
@@ -21,7 +21,7 @@ export class ShopComponent implements OnInit {
     pagination: any = {};
 
     // Paged items
-    pagedItems: any[];
+    pagedItems!: any[];
 
     constructor(
         private imageService: ImageService,
@@ -30,7 +30,7 @@ export class ShopComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-        this.imageService.getImages().subscribe((paintings) => {
+        this.imageService.getImages().subscribe((paintings: any[]) => {
             this.images = paintings;
         });
 

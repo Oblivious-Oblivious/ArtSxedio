@@ -10,15 +10,15 @@ import { CookieService } from "ngx-cookie-service";
     styleUrls: ["./navbar.component.scss"],
 })
 export class NavbarComponent implements OnInit {
-    @ViewChild("navBurger", { static: false }) navBurger: ElementRef;
-    @ViewChild("navMenu", { static: false }) navMenu: ElementRef;
-    @ViewChild("home", { static: false }) home: ElementRef;
-    @ViewChild("gallery", { static: false }) gallery: ElementRef;
-    @ViewChild("shop", { static: false }) shop: ElementRef;
-    @ViewChild("about", { static: false }) about: ElementRef;
+    @ViewChild("navBurger", { static: false }) navBurger!: ElementRef;
+    @ViewChild("navMenu", { static: false }) navMenu!: ElementRef;
+    @ViewChild("home", { static: false }) home!: ElementRef;
+    @ViewChild("gallery", { static: false }) gallery!: ElementRef;
+    @ViewChild("shop", { static: false }) shop!: ElementRef;
+    @ViewChild("about", { static: false }) about!: ElementRef;
 
-    _price: string;
-    items: string;
+    _price!: string;
+    items!: string;
 
     constructor(
         private themeService: ThemeService,
@@ -40,31 +40,31 @@ export class NavbarComponent implements OnInit {
             this.setDarkTheme();
         }
         this.underline(Number(this.cookieService.get("underlined")));
-        this._price = JSON.parse(localStorage.getItem("price")).price;
-        this.items = JSON.parse(localStorage.getItem("items")).items;
+        this._price = JSON.parse(localStorage.getItem("price")!).price;
+        this.items = JSON.parse(localStorage.getItem("items")!).items;
 
         this.productService.addToBasket.subscribe((product) => {
             /* Reset price into a number */
-            if (JSON.parse(localStorage.getItem("price")).price == "0.00") {
+            if (JSON.parse(localStorage.getItem("price")!).price == "0.00") {
                 localStorage.setItem("price", JSON.stringify({ price: 0 }));
             }
             localStorage.setItem(
                 "price",
                 JSON.stringify({
                     price:
-                        JSON.parse(localStorage.getItem("price")).price +
+                        JSON.parse(localStorage.getItem("price")!).price +
                         product.price,
                 })
             );
             localStorage.setItem(
                 "items",
                 JSON.stringify({
-                    items: JSON.parse(localStorage.getItem("items")).items + 1,
+                    items: JSON.parse(localStorage.getItem("items")!).items + 1,
                 })
             );
 
-            this._price = JSON.parse(localStorage.getItem("price")).price;
-            this.items = JSON.parse(localStorage.getItem("items")).items;
+            this._price = JSON.parse(localStorage.getItem("price")!).price;
+            this.items = JSON.parse(localStorage.getItem("items")!).items;
         });
     }
 
@@ -99,46 +99,46 @@ export class NavbarComponent implements OnInit {
         switch (element) {
             case 0:
                 this.cookieService.set("underlined", "0");
-                document.getElementById("underlined-home").className =
+                document.getElementById("underlined-home")!.className =
                     "navbar-item is-home-selected";
-                document.getElementById("underlined-gallery").className =
+                document.getElementById("underlined-gallery")!.className =
                     "navbar-item";
-                document.getElementById("underlined-shop").className =
+                document.getElementById("underlined-shop")!.className =
                     "navbar-item";
-                document.getElementById("underlined-about").className =
+                document.getElementById("underlined-about")!.className =
                     "navbar-item";
                 break;
             case 1:
                 this.cookieService.set("underlined", "1");
-                document.getElementById("underlined-home").className =
+                document.getElementById("underlined-home")!.className =
                     "navbar-item";
-                document.getElementById("underlined-gallery").className =
+                document.getElementById("underlined-gallery")!.className =
                     "navbar-item is-gallery-selected";
-                document.getElementById("underlined-shop").className =
+                document.getElementById("underlined-shop")!.className =
                     "navbar-item";
-                document.getElementById("underlined-about").className =
+                document.getElementById("underlined-about")!.className =
                     "navbar-item";
                 break;
             case 2:
                 this.cookieService.set("underlined", "2");
-                document.getElementById("underlined-home").className =
+                document.getElementById("underlined-home")!.className =
                     "navbar-item";
-                document.getElementById("underlined-gallery").className =
+                document.getElementById("underlined-gallery")!.className =
                     "navbar-item";
-                document.getElementById("underlined-shop").className =
+                document.getElementById("underlined-shop")!.className =
                     "navbar-item is-shop-selected";
-                document.getElementById("underlined-about").className =
+                document.getElementById("underlined-about")!.className =
                     "navbar-item";
                 break;
             case 3:
                 this.cookieService.set("underlined", "3");
-                document.getElementById("underlined-home").className =
+                document.getElementById("underlined-home")!.className =
                     "navbar-item";
-                document.getElementById("underlined-gallery").className =
+                document.getElementById("underlined-gallery")!.className =
                     "navbar-item";
-                document.getElementById("underlined-shop").className =
+                document.getElementById("underlined-shop")!.className =
                     "navbar-item";
-                document.getElementById("underlined-about").className =
+                document.getElementById("underlined-about")!.className =
                     "navbar-item is-about-selected";
                 break;
         }

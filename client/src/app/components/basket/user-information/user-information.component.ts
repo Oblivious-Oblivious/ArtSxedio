@@ -7,7 +7,7 @@ import { BasketComponent } from "../basket.component";
     styleUrls: ["./user-information.component.scss"],
 })
 export class UserInformationComponent implements OnInit {
-    @ViewChild(BasketComponent, { static: false }) basket: BasketComponent;
+    @ViewChild(BasketComponent, { static: false }) basket!: BasketComponent;
 
     constructor() {}
 

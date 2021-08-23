@@ -22,11 +22,11 @@ import { isPlatformBrowser } from "@angular/common";
     styleUrls: ["./lazy-load.component.scss"],
 })
 export class LazyLoadComponent implements OnInit, OnDestroy {
-    observer: IntersectionObserver;
+    observer!: IntersectionObserver;
     inView: boolean = false;
     once50PctVisible: boolean = false;
 
-    @ContentChild(TemplateRef, { static: false }) template: TemplateRef<any>;
+    @ContentChild(TemplateRef, { static: false }) template!: TemplateRef<any>;
     @Input() options: any = {
         threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
     };
@@ -53,7 +53,7 @@ export class LazyLoadComponent implements OnInit, OnDestroy {
         this.observer.disconnect();
     }
 
-    handleIntersect(entries, observer): void {
+    handleIntersect(entries: IntersectionObserverEntry[], observer: any): void {
         entries.forEach((entry: IntersectionObserverEntry) => {
             if (entry.isIntersecting) {
                 this.inView = true;
@@ -65,7 +65,7 @@ export class LazyLoadComponent implements OnInit, OnDestroy {
         });
     }
 
-    defaultInViewHandler(entry) {
+    defaultInViewHandler(entry: any): any {
         if (this.once50PctVisible) return false;
         if (this.inView$.observers.length) return false;
 

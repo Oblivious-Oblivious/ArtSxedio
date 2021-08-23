@@ -7,11 +7,11 @@ import { BasketComponent } from "../basket.component";
     styleUrls: ["./confirmation.component.scss"],
 })
 export class ConfirmationComponent implements OnInit {
-    @ViewChild(BasketComponent, { static: false }) basket: BasketComponent;
+    @ViewChild(BasketComponent, { static: false }) basket!: BasketComponent;
 
     constructor() {}
 
-    ngOnInit() {}
+    ngOnInit(): void {}
 
     redirectShop() {
         /* Reset steps */

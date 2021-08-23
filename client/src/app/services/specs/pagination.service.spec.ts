@@ -1,12 +1,16 @@
 import { TestBed } from "@angular/core/testing";
 
-import { PaginationService } from "./pagination.service";
+import { PaginationService } from "../pagination.service";
 
 describe("PaginationService", () => {
-    beforeEach(() => TestBed.configureTestingModule({}));
+    let service: PaginationService;
+
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(PaginationService);
+    });
 
     it("should be created", () => {
-        const service: PaginationService = TestBed.get(PaginationService);
         expect(service).toBeTruthy();
     });
 });

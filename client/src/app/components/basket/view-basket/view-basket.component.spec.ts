@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { ViewBasketComponent } from "./view-basket.component";
 
@@ -6,11 +6,11 @@ describe("ViewBasketComponent", () => {
     let component: ViewBasketComponent;
     let fixture: ComponentFixture<ViewBasketComponent>;
 
-    beforeEach(async(() => {
-        TestBed.configureTestingModule({
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
             declarations: [ViewBasketComponent],
         }).compileComponents();
-    }));
+    });
 
     beforeEach(() => {
         fixture = TestBed.createComponent(ViewBasketComponent);
