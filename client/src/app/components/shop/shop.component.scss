@@ -1,283 +1,284 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,300,400,500,600,700,800,900");
 
 .jumbotron {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  width: 100%;
-  height: 120%;
-  background: var(--body-bg-color);
-  box-shadow: 5px 5px 15px var(--shadow-color);
-  border-radius: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    width: 100%;
+    height: 120%;
+    background: var(--body-bg-color);
+    box-shadow: 5px 5px 15px var(--shadow-color);
+    border-radius: 10px;
 }
 
 .title {
-  font-size: 2.5em;
-  font-weight: 300;
-  font-style: italic;
-  color: var(--text-color);
-  margin-top: -0.33em;
+    font-size: 2.5em;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-color);
+    margin-top: -0.33em;
 }
 
 .price {
-  color: var(--price-yellow);
-  font-size: 64px;
-  font-weight: 300;
-  margin-bottom: 0.3em;
+    color: var(--price-yellow);
+    font-size: 64px;
+    font-weight: 300;
+    margin-bottom: 0.3em;
 }
 
 .tall {
-  img {
-    width: 61%;
-    margin-top: 0.7em;
-    margin-left: 1.5em;
-    filter: drop-shadow(2px 2px 8px var(--border-color));
-    border-radius: 10px;
-  }
+    img {
+        width: 61%;
+        margin-top: 0.7em;
+        margin-left: 1.5em;
+        filter: drop-shadow(2px 2px 8px var(--border-color));
+        border-radius: 10px;
+    }
 }
 
 .wide {
-  img {
-    width: 92%;
-    margin-top: 1.8em;
-    margin-left: 1.5em;
-    filter: drop-shadow(2px 2px 8px var(--border-color));
-    border-radius: 10px;
-  }
+    img {
+        width: 92%;
+        margin-top: 1.8em;
+        margin-left: 1.5em;
+        filter: drop-shadow(2px 2px 8px var(--border-color));
+        border-radius: 10px;
+    }
 }
 
 .ultra-wide {
-  img {
-    width: 100%;
-    margin-top: 6.2em;
-    margin-left: 1.5em;
-    filter: drop-shadow(2px 2px 8px var(--border-color));
-    border-radius: 10px;
-  }
+    img {
+        width: 100%;
+        margin-top: 6.2em;
+        margin-left: 1.5em;
+        filter: drop-shadow(2px 2px 8px var(--border-color));
+        border-radius: 10px;
+    }
 }
 
 .product {
-  margin-left: 3em;
-  margin-top: 2em;
+    margin-left: 3em;
+    margin-top: 2em;
 }
 
 .desc {
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 24px;
-  margin-bottom: 1.1em;
-  color: var(--text-color);
-  line-height: 1.6em;
-  text-align: justify;
-  
-  h3 {
-    font-weight: 400;
-    margin-bottom: 0.5em;
-  }
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 24px;
+    margin-bottom: 1.1em;
+    color: var(--text-color);
+    line-height: 1.6em;
+    text-align: justify;
 
-  ul {
-    font-size: 0.9em;
-    list-style: disc;
-    margin-left: 1em;
-  }
-  
-  li {
-    font-weight: 400;
-    text-indent: 1.2em;
-  }
+    h3 {
+        font-weight: 400;
+        margin-bottom: 0.5em;
+    }
+
+    ul {
+        font-size: 0.9em;
+        list-style: disc;
+        margin-left: 1em;
+    }
+
+    li {
+        font-weight: 400;
+        text-indent: 1.2em;
+    }
 }
 
 .buttons {
-  button {
-    background: var(--yellow);
-    padding: 0.6em;
-    display: inline-block;
-    outline: 0;
-    border: 0;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 1.2px;
-    margin-bottom: 2em;
-    cursor: pointer;
+    button {
+        background: var(--yellow);
+        padding: 0.6em;
+        display: inline-block;
+        outline: 0;
+        border: 0;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+        margin-bottom: 2em;
+        cursor: pointer;
 
-    &:hover {
-      background: var(--price-yellow);
-      transition: all 50ms ease-in-out;
+        &:hover {
+            background: var(--price-yellow);
+            transition: all 50ms ease-in-out;
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
     }
-    
-    &:active {
-      transform: scale(0.97);
-    }
-  }
 }
 
 .add {
-  color: var(--dark-color);
-  width: 67%;
+    color: var(--dark-color);
+    width: 67%;
 }
 
 .like {
-  color: var(--dark-color);
-  width: 23%;
+    color: var(--dark-color);
+    width: 23%;
 }
 
 @media screen and (max-width: 1215px) {
-  .jumbotron {
-    height: 100%;
-  }
-
-  .tall {
-    img {
-      width: 68%;
+    .jumbotron {
+        height: 100%;
     }
-  }
 
-  .wide {
-    img {
-      margin-top: 2em;
-      width: 100%;
+    .tall {
+        img {
+            width: 68%;
+        }
     }
-  }
 
-  .ultra-wide {
-    img {
-      margin-top: 6.5em;
+    .wide {
+        img {
+            margin-top: 2em;
+            width: 100%;
+        }
     }
-  }
+
+    .ultra-wide {
+        img {
+            margin-top: 6.5em;
+        }
+    }
 }
 
 @media screen and (max-width: 900px) {
-  .jumbotron {
-    height: 100%;
-  }
-
-  .tall {
-    img {
-      width: 79%;
+    .jumbotron {
+        height: 100%;
     }
-  }
 
-  .wide {
-    img {
-      margin-top: 3.5em;
-      width: 100%;
+    .tall {
+        img {
+            width: 79%;
+        }
     }
-  }
 
-  .ultra-wide {
-    img {
-      margin-top: 8em;
+    .wide {
+        img {
+            margin-top: 3.5em;
+            width: 100%;
+        }
     }
-  }
+
+    .ultra-wide {
+        img {
+            margin-top: 8em;
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {
-  .jumbotron {
-    height: 100%;
-  }
-
-  .tall {
-    img {
-      width: 91%;
+    .jumbotron {
+        height: 100%;
     }
-  }
 
-  .wide {
-    img {
-      width: 100%;
+    .tall {
+        img {
+            width: 91%;
+        }
     }
-  }
+
+    .wide {
+        img {
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 769px) {
-  .jumbotron {
-    height: 100%;
-  }
-
-  .tall {
-    img {
-      margin-left: 1.9em;
-      width: 90%;
+    .jumbotron {
+        height: 100%;
     }
-  }
 
-  .wide {
-    img {
-      margin-top: 1em;
-      width: 92%;
+    .tall {
+        img {
+            margin-left: 1.9em;
+            width: 90%;
+        }
     }
-  }
 
-  .ultra-wide {
-    img {
-      margin-top: 1em;
-      width: 92%;
+    .wide {
+        img {
+            margin-top: 1em;
+            width: 92%;
+        }
     }
-  }
 
-  .product {
-    margin-left: 2.5em;
-  }
+    .ultra-wide {
+        img {
+            margin-top: 1em;
+            width: 92%;
+        }
+    }
+
+    .product {
+        margin-left: 2.5em;
+    }
 }
 
 @media screen and (max-width: 640px) {
-  .jumbotron {
-    height: 100%;
-  }
-
-  .tall {
-    img {
-      margin-left: 1.9em;
-      width: 88%;
+    .jumbotron {
+        height: 100%;
     }
-  }
 
-  .wide {
-    img {
-      margin-top: 1em;
-      width: 315px;
+    .tall {
+        img {
+            margin-left: 1.9em;
+            width: 88%;
+        }
     }
-  }
 
-  .ultra-wide {
-    img {
-      margin-top: 1em;
-      width: 315px;
+    .wide {
+        img {
+            margin-top: 1em;
+            width: 315px;
+        }
     }
-  }
 
-  .product {
-    margin-left: 2.5em;
-  }
+    .ultra-wide {
+        img {
+            margin-top: 1em;
+            width: 315px;
+        }
+    }
+
+    .product {
+        margin-left: 2.5em;
+    }
 }
 
 @media screen and (max-width: 320px) {
-  .jumbotron {
-    height: 100%;
-  }
-
-  .tall {
-    img {
-      margin-left: 1.9em;
-      width: 78%;
+    .jumbotron {
+        height: 100%;
     }
-  }
 
-  .wide {
-    img {
-      margin-top: 1em;
-      width: 82%;
+    .tall {
+        img {
+            margin-left: 1.9em;
+            width: 78%;
+        }
     }
-  }
 
-  .ultra-wide {
-    img {
-      margin-top: 1em;
-      width: 81%;
+    .wide {
+        img {
+            margin-top: 1em;
+            width: 82%;
+        }
     }
-  }
 
-  .product {
-    margin-left: 2.5em;
-  }
+    .ultra-wide {
+        img {
+            margin-top: 1em;
+            width: 81%;
+        }
+    }
+
+    .product {
+        margin-left: 2.5em;
+    }
 }

@@ -15,8 +15,8 @@ export const light: Theme = {
         "--shadow-color": "rgba(24, 24, 24, 0.5)",
         "--nav-shadow-color": "rgba(24, 24, 24, 0.12)",
         "--toggle-color": "var(--yellow)",
-        "--toggle-bg-color": "#f4f4f4"
-    }
+        "--toggle-bg-color": "#f4f4f4",
+    },
 };
 
 export const dark: Theme = {
@@ -37,6 +37,6 @@ export const dark: Theme = {
         // "--nav-shadow-color": "rgba(255, 255, 255, 0.12)",
         "--nav-shadow-color": "rgba(0, 0, 0, 0.24)",
         "--toggle-color": "#181818",
-        "--toggle-bg-color": "var(--yellow)"
-    }
+        "--toggle-bg-color": "var(--yellow)",
+    },
 };

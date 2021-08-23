@@ -1,20 +1,19 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { BasketComponent } from '../basket.component';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { BasketComponent } from "../basket.component";
 
 @Component({
-  selector: 'app-user-information',
-  templateUrl: './user-information.component.html',
-  styleUrls: ['./user-information.component.scss']
+    selector: "app-user-information",
+    templateUrl: "./user-information.component.html",
+    styleUrls: ["./user-information.component.scss"],
 })
 export class UserInformationComponent implements OnInit {
-  @ViewChild(BasketComponent, { static: false }) basket: BasketComponent;
+    @ViewChild(BasketComponent, { static: false }) basket: BasketComponent;
 
-  constructor() { }
+    constructor() {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {}
 
-  gotoPayment() {
-    this.basket.userInfoEvent();
-  }
+    gotoPayment() {
+        this.basket.userInfoEvent();
+    }
 }
