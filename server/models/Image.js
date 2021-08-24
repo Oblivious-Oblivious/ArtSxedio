@@ -8,7 +8,7 @@ const imageSchema = new Schema({
     size: String,
     price: Number,
     dimensions: String,
-    type: String
+    type: String,
 });
 
 module.exports = mongoose.model("Image", imageSchema, "Images");

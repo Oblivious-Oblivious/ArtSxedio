@@ -17,12 +17,12 @@ body {
 }
 
 .has-border {
-    border-bottom: .5px solid #d3d3d3;
-    border-top: .5px solid #d3d3d3;
+    border-bottom: 0.5px solid #d3d3d3;
+    border-top: 0.5px solid #d3d3d3;
 }
 
 .has-border-bottom {
-    border-bottom: .5px solid #d3d3d3;
+    border-bottom: 0.5px solid #d3d3d3;
 }
 
 .vertical-centering {
@@ -39,19 +39,18 @@ body {
 
 /* Navbar */
 
-
-
 /* Left Container */
 
 .breadcrumb-mast {
-    padding-top	: 2em;
+    padding-top: 2em;
 }
 
 .breadcrumb-mast p {
     padding-bottom: 2em;
 }
 
-.left-container .breadcrumb li a:hover, .left-container .breadcrumb li a {
+.left-container .breadcrumb li a:hover,
+.left-container .breadcrumb li a {
     color: hsl(0, 0%, 86%);
     font-size: small;
 }
@@ -61,7 +60,7 @@ body {
 }
 
 span.order-logo {
-    padding-right: .5em;
+    padding-right: 0.5em;
 }
 
 .order-details-title {
@@ -74,7 +73,7 @@ span.order-logo {
 }
 
 .order-number {
-    padding: .5em 0;
+    padding: 0.5em 0;
 }
 
 .order-details {
@@ -87,7 +86,7 @@ span.order-logo {
 }
 
 .details-box .left {
-    border-right: .5px solid #d3d3d3;
+    border-right: 0.5px solid #d3d3d3;
 }
 
 /* right container */
@@ -95,7 +94,6 @@ span.order-logo {
 .graduacion {
     padding: 1em;
 }
-
 
 /* footer */
 

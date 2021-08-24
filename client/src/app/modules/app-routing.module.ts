@@ -13,15 +13,15 @@ import { ViewBasketComponent } from "../components/basket/view-basket/view-baske
 import { Error404Component } from "../components/error404/error404.component";
 
 const routes: Routes = [
-        { path: "", component: IndexComponent },
-        { path: "gallery", component: GalleryComponent },
-        { path: "shop", component: ShopComponent },
-        { path: "about", component: AboutComponent },
-        { path: "basket/view-basket", component: ViewBasketComponent },
-        { path: "basket/user-information", component: UserInformationComponent },
-        { path: "basket/payment", component: PaymentComponent },
-        { path: "basket/confirmation", component: ConfirmationComponent },
-        { path: "**", component: Error404Component },
+    { path: "", component: IndexComponent },
+    { path: "gallery", component: GalleryComponent },
+    { path: "shop", component: ShopComponent },
+    { path: "about", component: AboutComponent },
+    { path: "basket/view-basket", component: ViewBasketComponent },
+    { path: "basket/user-information", component: UserInformationComponent },
+    { path: "basket/payment", component: PaymentComponent },
+    { path: "basket/confirmation", component: ConfirmationComponent },
+    { path: "**", component: Error404Component },
 ];
 
 @NgModule({

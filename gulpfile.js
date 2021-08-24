@@ -70,14 +70,17 @@ const compileAngular = () => {
 
     /* Used as a nop to deal with blocking the 'ng build' command */
     return gulp.src(".");
-}
+};
 
 /* Copy all assets into exportsource */
 const copyViews = () => {
     process.chdir(__dirname);
-    return gulp.src(clientsource + "dist/client/*") /* Grab all javascript files and index.html */
+    return gulp
+        .src(
+            clientsource + "dist/client/*"
+        ) /* Grab all javascript files and index.html */
         .pipe(gulp.dest(exportsource + "views/"));
-}
+};
 
 /* Compile the express typescript into a dist folder */
 // const compileExpress = () => {
@@ -90,14 +93,14 @@ const copyViews = () => {
 /* Copy all server files into exportsource */
 const copyServer = () => {
     // return gulp.src(serversource + "dist/**/*")
-    return gulp.src(serversource + "/**/*")
+    return gulp
+        .src(serversource + "/**/*")
         .pipe(gulp.dest(exportsource + "server/"));
-}
+};
 
 const cleanup = () => {
-    return gulp.src(clientsource + "dist", { allowEmpty: true })
-        .pipe(clean());
-}
+    return gulp.src(clientsource + "dist", { allowEmpty: true }).pipe(clean());
+};
 
 const compile = gulp.series(compileAngular, copyViews, copyServer, cleanup);
 gulp.task("default", compile);

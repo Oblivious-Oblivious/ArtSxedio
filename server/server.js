@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const path = require("path");
 
 const images = require("./routes/images");
@@ -8,10 +7,12 @@ const port = 3000;
 const app = express();
 
 app.use(express.static(path.join(__dirname, "../views")));
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(bodyParser.json());
+app.use(
+    express.urlencoded({
+        extended: true,
+    })
+);
+app.use(express.json());
 
 app.use("/", images);
 

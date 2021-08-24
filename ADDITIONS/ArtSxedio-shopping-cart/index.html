@@ -1,249 +1,355 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LECO - Detalle de Orden</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a href="#" class="navbar-item">
-                <img src="img/logo.png" alt="Leco">
-            </a>
-        </div>
-        <div class="navbar-menu is-uppercase has-text-light">
-            <div class="navbar-end is-small">
-                <span class="navbar-item has-text-grey-lighter">Lucila Martinez</span>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>LECO - Detalle de Orden</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
+        ></script>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
                 <a href="#" class="navbar-item">
-                    <img src="img/usuario.png" alt="user avatar">
+                    <img src="img/logo.png" alt="Leco" />
                 </a>
-                <span class="navbar-item has-text-black double-size">|</span>
-                <span class="navbar-item has-text-grey-lighter">Carrito</span>
-                <span id="cart-amount" class="navbar-item has-text-black double-size">0</span>
-                <span class="navbar-item">
-                    <img src="img/carrito.png" alt="shopping-cart">
-                </span>
             </div>
-        </div>
-    </nav>
+            <div class="navbar-menu is-uppercase has-text-light">
+                <div class="navbar-end is-small">
+                    <span class="navbar-item has-text-grey-lighter"
+                        >Lucila Martinez</span
+                    >
+                    <a href="#" class="navbar-item">
+                        <img src="img/usuario.png" alt="user avatar" />
+                    </a>
+                    <span class="navbar-item has-text-black double-size"
+                        >|</span
+                    >
+                    <span class="navbar-item has-text-grey-lighter"
+                        >Carrito</span
+                    >
+                    <span
+                        id="cart-amount"
+                        class="navbar-item has-text-black double-size"
+                        >0</span
+                    >
+                    <span class="navbar-item">
+                        <img src="img/carrito.png" alt="shopping-cart" />
+                    </span>
+                </div>
+            </div>
+        </nav>
 
-    <!-- Main container -->
-    <div class="columns is-uppercase">
-        <div class="column is-three-quarters left-container">
-            <section class="container breadcrumb-mast">
-                <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
-                    <ul>
-                        <li class="has-text-grey-lighter"><a href="#">Home</a></li>
-                        <li class="has-text-grey-lighter"><a href="#">Tu cuenta</a></li>
-                        <li class="has-text-grey-lighter"><a href="#">Tus órdenes</a></li>
-                        <li class="is-active"><a class="has-text-grey-dark" href="#" aria-current="page">Detalle de orden</a></li>
-                    </ul>
-                </nav>
-                <h2 class="title is-4"><span class="order-logo"><img src="img/ordenes.png" alt="ordenes"></span>Detalle de orden</h2>
-                <p class="is-normal">Desde esta pantalla podrás ver el detalle por orden</p>
-            </section>
-            <div class="has-background-light order-details-title has-border">
-                <div class="container">
-                    <h2 class="has-text-success">Detalle de orden</h2>
+        <!-- Main container -->
+        <div class="columns is-uppercase">
+            <div class="column is-three-quarters left-container">
+                <section class="container breadcrumb-mast">
+                    <nav
+                        class="breadcrumb has-succeeds-separator"
+                        aria-label="breadcrumbs"
+                    >
+                        <ul>
+                            <li class="has-text-grey-lighter">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="has-text-grey-lighter">
+                                <a href="#">Tu cuenta</a>
+                            </li>
+                            <li class="has-text-grey-lighter">
+                                <a href="#">Tus órdenes</a>
+                            </li>
+                            <li class="is-active">
+                                <a
+                                    class="has-text-grey-dark"
+                                    href="#"
+                                    aria-current="page"
+                                    >Detalle de orden</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                    <h2 class="title is-4">
+                        <span class="order-logo"
+                            ><img src="img/ordenes.png" alt="ordenes" /></span
+                        >Detalle de orden
+                    </h2>
+                    <p class="is-normal">
+                        Desde esta pantalla podrás ver el detalle por orden
+                    </p>
+                </section>
+                <div
+                    class="has-background-light order-details-title has-border"
+                >
+                    <div class="container">
+                        <h2 class="has-text-success">Detalle de orden</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="has-background-white-bis order-number has-border-bottom">
-                <div class="container">
-                    <h2 class="order-number is-small is-bold">Numero de orden</h2>
+                <div
+                    class="
+                        has-background-white-bis
+                        order-number
+                        has-border-bottom
+                    "
+                >
+                    <div class="container">
+                        <h2 class="order-number is-small is-bold">
+                            Numero de orden
+                        </h2>
+                    </div>
                 </div>
-            </div>
-            <div class="columns has-border-bottom is-small section order-details">
-                <div class="column">
-                    <span class="is-bold">No. orden</span><br />
-                    <span>34679</span>
-                </div>
-                <div class="column">
-                    <span class="is-bold">Fecha</span><br />
-                    <span>20/03/2018</span>
-                </div>
-                <div class="column">
-                    <span class="is-bold">Total</span><br />
-                    <span>$2,340 MXN</span>
-                </div>
-                <div class="column">
-                    <span class="is-bold">Cantidad</span><br />
-                    <span>3</span>
-                </div>
-                <div class="column">
-                    <span class="is-bold">Estatus</span><br />
-                    <span>Entregado</span>
-                </div>
-                <div class="column">
-                    <span class="is-bold">Enviar a</span><br />
-                    <span>Lucila Susana Martinez Reyes</span>
-                </div>
-            </div>
-            <div class="container is-small">
-                <div class="columns box vertical-centering details-box">
+                <div
+                    class="
+                        columns
+                        has-border-bottom
+                        is-small
+                        section
+                        order-details
+                    "
+                >
                     <div class="column">
-                        <div class="left">
-                            <span class="">Accuve Oasis</span><br />
-                            <span><img src="img/accuve.png" alt=""></span>
-                        </div>
+                        <span class="is-bold">No. orden</span><br />
+                        <span>34679</span>
                     </div>
                     <div class="column">
-                        <div class="field ">
-                            <label class="label is-small">Cantidad</label>
-                            <div class="control">
-                                <div class="select is-small">
-                                <select>
-                                    <option>1</option>
-                                    <option>2</option>
-                                </select>
+                        <span class="is-bold">Fecha</span><br />
+                        <span>20/03/2018</span>
+                    </div>
+                    <div class="column">
+                        <span class="is-bold">Total</span><br />
+                        <span>$2,340 MXN</span>
+                    </div>
+                    <div class="column">
+                        <span class="is-bold">Cantidad</span><br />
+                        <span>3</span>
+                    </div>
+                    <div class="column">
+                        <span class="is-bold">Estatus</span><br />
+                        <span>Entregado</span>
+                    </div>
+                    <div class="column">
+                        <span class="is-bold">Enviar a</span><br />
+                        <span>Lucila Susana Martinez Reyes</span>
+                    </div>
+                </div>
+                <div class="container is-small">
+                    <div class="columns box vertical-centering details-box">
+                        <div class="column">
+                            <div class="left">
+                                <span class="">Accuve Oasis</span><br />
+                                <span><img src="img/accuve.png" alt="" /></span>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label class="label is-small">Cantidad</label>
+                                <div class="control">
+                                    <div class="select is-small">
+                                        <select>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column">
-                        <span class="is-bold">Precio unitario</span><br />
-                        <span>$2,345</span>
-                    </div>
-                    <div class="column">
-                        <span class="is-bold">Precio total</span><br />
-                        <span>$4,567</span>
-                    </div>
-                    <div class="column">
-                        <a class="button is-info is-rounded is-bold">Volver a comprar</a>
-                    </div>
-                </div>
-                <div class="columns box vertical-centering details-box">
-                    <div class="column">
-                        <div class="left">
-                            <span class="">Lentes</span><br />
-                            <span><img src="img/lentes.png" alt=""></span>
+                        <div class="column">
+                            <span class="is-bold">Precio unitario</span><br />
+                            <span>$2,345</span>
+                        </div>
+                        <div class="column">
+                            <span class="is-bold">Precio total</span><br />
+                            <span>$4,567</span>
+                        </div>
+                        <div class="column">
+                            <a class="button is-info is-rounded is-bold"
+                                >Volver a comprar</a
+                            >
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="field ">
-                            <label class="label is-small">Cantidad</label>
-                            <div class="control">
-                                <div class="select is-small">
-                                <select>
-                                    <option>1</option>
-                                    <option>2</option>
-                                </select>
+                    <div class="columns box vertical-centering details-box">
+                        <div class="column">
+                            <div class="left">
+                                <span class="">Lentes</span><br />
+                                <span><img src="img/lentes.png" alt="" /></span>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label class="label is-small">Cantidad</label>
+                                <div class="control">
+                                    <div class="select is-small">
+                                        <select>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column">
-                        <span class="is-bold">Precio unitario</span><br />
-                        <span>$2,345</span>
-                    </div>
-                    <div class="column">
-                        <span class="is-bold">Precio total</span><br />
-                        <span>$4,567</span>
-                    </div>
-                    <div class="column">
-                        <a class="button is-info is-rounded is-bold">Volver a comprar</a>
-                    </div>
-                </div>
-                <div class="columns box vertical-centering details-box">
-                    <div class="column">
-                        <div class="left">
-                            <span class="">Accuve Oasis</span><br />
-                            <span><img src="img/accuve.png" alt=""></span>
+                        <div class="column">
+                            <span class="is-bold">Precio unitario</span><br />
+                            <span>$2,345</span>
+                        </div>
+                        <div class="column">
+                            <span class="is-bold">Precio total</span><br />
+                            <span>$4,567</span>
+                        </div>
+                        <div class="column">
+                            <a class="button is-info is-rounded is-bold"
+                                >Volver a comprar</a
+                            >
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="field ">
-                            <label class="label is-small">Cantidad</label>
-                            <div class="control">
-                                <div class="select is-small">
-                                <select>
-                                    <option>1</option>
-                                    <option>2</option>
-                                </select>
+                    <div class="columns box vertical-centering details-box">
+                        <div class="column">
+                            <div class="left">
+                                <span class="">Accuve Oasis</span><br />
+                                <span><img src="img/accuve.png" alt="" /></span>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label class="label is-small">Cantidad</label>
+                                <div class="control">
+                                    <div class="select is-small">
+                                        <select>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="column">
+                            <span class="is-bold">Precio unitario</span><br />
+                            <span>$2,345</span>
+                        </div>
+                        <div class="column">
+                            <span class="is-bold">Precio total</span><br />
+                            <span>$4,567</span>
+                        </div>
+                        <div class="column">
+                            <a class="button is-info is-rounded is-bold"
+                                >Volver a comprar</a
+                            >
+                        </div>
                     </div>
-                    <div class="column">
-                        <span class="is-bold">Precio unitario</span><br />
-                        <span>$2,345</span>
+                </div>
+            </div>
+            <div
+                class="
+                    column
+                    has-background-light
+                    is-marginless is-small
+                    section
+                "
+            >
+                <p class="is-gray">Historial Clinico</p>
+                <div class="vertical-centering graduacion">
+                    <h4 class="title is-6">
+                        <span class="order-logo"
+                            ><img
+                                src="img/graduacion.png"
+                                alt="ordenes" /></span
+                        >Tu graduación
+                    </h4>
+                    <h2 class="order-number is-small is-bold">
+                        Graduación ojo derecho
+                    </h2>
+                    <div class="columns">
+                        <div class="column">
+                            <span>Esfera</span>
+                            <input
+                                class="input"
+                                type="text"
+                                placeholder="-0.05"
+                            />
+                        </div>
+                        <div class="column">
+                            <span>Cilindro</span>
+                            <input
+                                class="input"
+                                type="text"
+                                placeholder="-0.05"
+                            />
+                        </div>
+                        <div class="column">
+                            <span>Eje</span>
+                            <input
+                                class="input"
+                                type="text"
+                                placeholder="-0.05"
+                            />
+                        </div>
                     </div>
-                    <div class="column">
-                        <span class="is-bold">Precio total</span><br />
-                        <span>$4,567</span>
+                    <h2 class="order-number is-small is-bold">
+                        Graduación ojo izquierdo
+                    </h2>
+                    <div class="columns">
+                        <div class="column">
+                            <span>Esfera</span>
+                            <input
+                                class="input"
+                                type="text"
+                                placeholder="-0.05"
+                            />
+                        </div>
+                        <div class="column">
+                            <span>Cilindro</span>
+                            <input
+                                class="input"
+                                type="text"
+                                placeholder="-0.05"
+                            />
+                        </div>
+                        <div class="column">
+                            <span>Eje</span>
+                            <input
+                                class="input"
+                                type="text"
+                                placeholder="-0.05"
+                            />
+                        </div>
                     </div>
-                    <div class="column">
-                        <a class="button is-info is-rounded is-bold">Volver a comprar</a>
+                    <div class="columns">
+                        <div class="column">
+                            <span class="is-bold">Optometrista</span><br />
+                            <span class="is-normal">Daniel Zavala</span>
+                        </div>
+                        <div class="column">
+                            <span class="is-bold" s>Fecha</span><br />
+                            <span class="is-normal">23/03/2018</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="column has-background-light is-marginless is-small section">
-            <p class="is-gray">Historial Clinico</p>
-            <div class="vertical-centering graduacion">
-                <h4 class="title is-6"><span class="order-logo"><img src="img/graduacion.png" alt="ordenes"></span>Tu graduación</h4>
-                <h2 class="order-number is-small is-bold">Graduación ojo derecho</h2>
-                <div class="columns">
-                    <div class="column">
-                        <span>Esfera</span>
-                        <input class="input" type="text" placeholder="-0.05">
-                    </div>
-                    <div class="column">
-                        <span>Cilindro</span>
-                        <input class="input" type="text" placeholder="-0.05">
-                    </div>
-                    <div class="column">
-                        <span>Eje</span>
-                        <input class="input" type="text" placeholder="-0.05">
-                    </div>
-                </div>
-                <h2 class="order-number is-small is-bold">Graduación ojo izquierdo</h2>
-                <div class="columns">
-                    <div class="column">
-                        <span>Esfera</span>
-                        <input class="input" type="text" placeholder="-0.05">
-                    </div>
-                    <div class="column">
-                        <span>Cilindro</span>
-                        <input class="input" type="text" placeholder="-0.05">
-                    </div>
-                    <div class="column">
-                        <span>Eje</span>
-                        <input class="input" type="text" placeholder="-0.05">
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <span class="is-bold">Optometrista</span><br>
-                        <span class="is-normal">Daniel Zavala</span>
-                    </div>
-                    <div class="column">
-                        <span class="is-bold"s>Fecha</span><br>
-                        <span class="is-normal">23/03/2018</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="footer is-small">
-        <div class="column">
-            <p>Aviso de Privacidad</p>
-            <p>Terminos y condiciones</p>
-            <p>FAQ</p>
-        </div>
-        <div class="column">
-            <p>Copyright &copy; 2016. Leco Comercio SAPI de CV</p>
-        </div>
-        <div class="column">
-            <p>Common Sense People</p>
-        </div>
-    </footer>
-  </body>
+        <!-- Footer -->
+        <footer class="footer is-small">
+            <div class="column">
+                <p>Aviso de Privacidad</p>
+                <p>Terminos y condiciones</p>
+                <p>FAQ</p>
+            </div>
+            <div class="column">
+                <p>Copyright &copy; 2016. Leco Comercio SAPI de CV</p>
+            </div>
+            <div class="column">
+                <p>Common Sense People</p>
+            </div>
+        </footer>
+    </body>
 </html>
