@@ -30,6 +30,7 @@ export class ShopComponent implements OnInit {
     ) {}
 
     ngOnInit() {
+        /* TODO Load lazily instead of all at once */
         this.imageService.getImages().subscribe((paintings: any[]) => {
             this.images = paintings;
         });
