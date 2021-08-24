@@ -66,7 +66,7 @@ const serversource = "server/";
 const compileAngular = () => {
     process.chdir(clientsource);
     // execSync("npm install"); /* Install dependencies */
-    execSync("ng build --prod"); /* Make the compilation blocking */
+    execSync("ng build --configuration production"); /* Make the compilation blocking */
 
     /* Used as a nop to deal with blocking the 'ng build' command */
     return gulp.src(".");
@@ -99,8 +99,15 @@ const copyServer = () => {
 };
 
 const cleanup = () => {
-    return gulp.src(clientsource + "dist", { allowEmpty: true }).pipe(clean());
+    return gulp
+        .src(clientsource + "dist", { allowEmpty: true })
+        .pipe(clean());
 };
 
-const compile = gulp.series(compileAngular, copyViews, copyServer, cleanup);
+const compile = gulp.series(
+    compileAngular,
+    copyViews,
+    copyServer,
+    cleanup
+);
 gulp.task("default", compile);
