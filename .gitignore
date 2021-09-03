@@ -2,3 +2,4 @@
 /server/node_modules
 /export/server/node_modules
 export
+.DS_Store
