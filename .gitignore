@@ -1,5 +1,3 @@
-/node_modules
-/server/node_modules
-/export/server/node_modules
+node_modules
 export
 .DS_Store
