@@ -29,6 +29,6 @@
         "typescript": "^3.5.3"
     },
     "dependencies": {
-        "mongoose": "^5.7.5"
+        "mongoose": "^5.13.15"
     }
 }
